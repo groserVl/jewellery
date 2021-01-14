@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Smart Device</title>
-  <link rel="preload" href="fonts/ptmono-regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/robotocondensed-bold.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/robotocondensed-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorantgaramond-mediumitalic.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorantgaramond-semibold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorantgaramond-bold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 
   <!-- Pixel Glass -->
@@ -42,10 +45,20 @@
 </head>
 
 <body>
-  <div class="wrap">
-    <p>Perfection</p>
-    <p>Shop Now</p>
-  </div>
+  <header class="header">
+    <div class="container">
+      <form action="#" method="GET">
+        <label for="search">Type here to search</label>
+        <input type="text" id="search" name="search" placeholder="Type here to search">
+        <button type="submit">
+          <span>Найти</span>
+        </button>
+      </form>
+      <a href="">
+        <img src="" alt="Логотип">
+      </a>
+    </div>
+  </header>
 
   <div class="modal-overlay"></div>
 

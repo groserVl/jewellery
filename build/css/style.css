@@ -39,3 +39,6 @@
   font-weight: 700;
   font-display: swap;
   src: local("Cormorant Garamond Bold"), local("Cormorant Garamond-Bold"), url("../fonts/cormorantgaramond-bold.woff2") format("woff2"), url("../fonts/cormorantgaramond-bold.woff") format("woff"); }
+
+.header {
+  width: 100%; }
