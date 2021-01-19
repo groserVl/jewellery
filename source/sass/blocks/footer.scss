@@ -1,0 +1,35 @@
+.footer {
+  padding-top: 92px;
+  padding-bottom: 80px;
+
+  color: $bg;
+
+  background-color: $black;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: $tablet-width) {
+  .footer {
+    padding-top: 50px;
+  }
+
+  .footer__wrapper {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  ul.footer__conditions-list,
+  ul.footer__about-list {
+    margin-right: 12.7%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .footer__wrapper {
+    display: block;
+  }
+}

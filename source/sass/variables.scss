@@ -1,19 +1,14 @@
 //! Цвета
-$bg: #1b2d37;
-$text: #666666;
-$white: #ffffff;
-$blue: #00b2ff;
-$gray: rgba(#1b2d37, 0.5);
-
-// Шрифты
-$mono: "PT Mono", "Arial", sans-serif;
-$roboto: "Roboto Condensed", "Arial", sans-serif;
+$bg: #ffffff;
+$text: #1d1613;
+$gray: #f0eae4;
+$brown: #a87b62;
+$black: #000000;
 
 // Адаптивность
 $large-width: 1360px;
 $tablet-width: 1023px;
 $mobile-width: 767px;
-
 
 // Ретина
 $retina-dpi: 144dpi;

@@ -1,0 +1,19 @@
+.new-goods {
+  padding-top: 120px;
+}
+
+.new-goods__title-wrap {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+
+  align-items: center;
+}
+
+.new-goods h2 {
+  @include h2(22px);
+}
+
+.new-goods a {
+  padding-bottom: 0;
+}

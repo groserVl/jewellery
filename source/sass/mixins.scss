@@ -1,0 +1,57 @@
+@mixin list-reset($padding-left: 0) {
+  margin: 0;
+  padding-left: $padding-left;
+  list-style: none;
+}
+
+// @mixin button($color: $white) {
+//   display: inline-block;
+
+//   font-family: $roboto;
+//   font-weight: 700;
+//   font-size: 14px;
+//   line-height: 16px;
+//   color: $color;
+//   text-transform: uppercase;
+//   letter-spacing: 0.8px;
+//   vertical-align: middle;
+
+
+//   border: 1px solid $color;
+//   border-radius: 5px;
+
+//   transition: all 0.3s;
+
+//   &:hover,
+//   &:focus {
+//     opacity: 0.6;
+//   }
+
+//   &:active {
+//     opacity: 0.3;
+//   }
+// }
+
+@mixin h2($num: 0) {
+  margin: 0;
+  margin-bottom: $num;
+
+  font-family: $corm;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+}
+
+
+@mixin hover-trans {
+  transition: opacity 0.3s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

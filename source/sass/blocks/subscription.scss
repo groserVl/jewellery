@@ -1,0 +1,146 @@
+.subscription {
+  width: 42.74%;
+}
+
+.subscription h2 {
+  margin: 0;
+  margin-bottom: 9px;
+
+  font-family: $corm;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+}
+
+.subscription p {
+  margin: 0;
+  margin-bottom: 40px;
+
+  color: #9b9997;
+  white-space: nowrap;
+}
+
+.subscription__form-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5px;
+
+  border-bottom: 2px solid $bg;
+}
+
+.subscription input {
+  width: 290px;
+
+
+  color: $bg;
+
+  border: none;
+  background: none;
+
+  transition: opacity 0.3s;
+
+  &::placeholder {
+    font-size: 14px;
+    color: #9b9997;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+}
+
+.subscription button {
+  position: relative;
+
+  padding-right: 42px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  color: $bg;
+  white-space: nowrap;
+
+  border: none;
+  background: none;
+
+  cursor: pointer;
+  transition: opacity 0.3s;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    top: 12px;
+    right: 0;
+
+    width: 29px;
+    height: 2px;
+
+    background-color: $bg;
+  }
+
+  &::after {
+    top: 9px;
+    right: 0;
+
+    width: 8px;
+    height: 8px;
+
+    border: 2px solid $bg;
+    border-left: transparent;
+    border-bottom: transparent;
+
+    transform: rotate(45deg);
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+    outline: none;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .subscription {
+    width: 82.8%;
+  }
+
+  .subscription button {
+    padding-right: 43px;
+  }
+}
+
+
+@media (max-width: $mobile-width) {
+  .subscription {
+    width: 100%;
+  }
+
+  .subscription h2,
+  .subscription p {
+    width: 80%;
+
+    white-space: normal;
+  }
+
+  .subscription h2 {
+    margin-bottom: 13px;
+  }
+
+  .subscription p {
+    margin-bottom: 40px;
+  }
+
+  .subscription input {
+    min-width: 180px;
+  }
+}

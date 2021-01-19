@@ -45,10 +45,10 @@ body {
   margin: 0 auto;
   padding: 0;
 
-  font-family: $mono;
+  font-family: $pop;
+  font-weight: 500;
   font-size: 16px;
-  line-height: 21.5px;
-  font-weight: 400;
+  line-height: 21px;
   color: $text;
   word-wrap: normal;
 }
@@ -56,17 +56,38 @@ body {
 .container {
   max-width: 1230px;
   margin: 0 auto;
-  padding: 0 30px;
+  // padding: 0 30px;
+  padding: 0 2%;
 }
 
 @media (max-width: $tablet-width) {
   .container {
-    padding: 0 3%;
+    padding: 0 5.7%;
   }
 }
 
 @media (max-width: $mobile-width) {
   .container {
-    padding: 0 4%;
+    padding: 0 4.4%;
+  }
+}
+
+.link {
+  padding-bottom: 5px;
+
+  color: inherit;
+
+  border-bottom: 1px solid #a87b62;
+
+  transition: opacity 0.3s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+    border-color: transparent;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

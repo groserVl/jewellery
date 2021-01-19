@@ -1,0 +1,86 @@
+.article {
+  height: 100%;
+
+  background-image: url("../img/blog/blog-1-desktop1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 285px 300px;
+  // background-size: 50% 100%;
+  // background-size: cover;
+  background-color: $gray;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/blog/blog-1-desktop2x.jpg");
+  }
+}
+
+@media (max-width: 1100px) {
+  .article {
+    background-size: 260px 300px;
+  }
+}
+
+.article--crystals-img {
+  background-image: url("../img/blog/blog-2-desktop1x.jpg");
+  background-position: 100% 0;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/blog/blog-2-desktop2x.jpg");
+  }
+}
+
+.article--trends-img {
+  display: flex;
+  padding-top: 330px;
+
+  background-image: url("../img/blog/blog-3-desktop1x.jpg");
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/blog/blog-3-desktop2x.jpg");
+  }
+}
+
+.article__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  margin-left: auto;
+  padding: 67px 7%;
+}
+
+.article--crystals-img .article__info {
+  margin-left: 0;
+  padding: 68px 10%;
+}
+
+.article--trends-img .article__info {
+  height: 300px;
+  // margin-top: auto;
+
+  background-color: $gray;
+}
+
+.article__info h3 {
+  margin: 0;
+  margin-bottom: 36px;
+
+  font-family: $corm;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 34px;
+  color: $black;
+  text-align: center;
+  white-space: normal;
+}
+
+.article time {
+  order: -1;
+  margin-bottom: 16px;
+
+  font-size: 14px;
+  line-height: 15px;
+  color: #9b9997;
+}

@@ -1,3 +1,27 @@
 .header {
-  width: 100%;
+  padding-top: 30px;
+
+  background-color: $bg;
+}
+
+.header--bg-brown {
+  background-color: $brown;
+}
+
+@media (max-width: $tablet-width) {
+  .header {
+    padding-top: 30px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .header {
+    padding-top: 20px;
+  }
+}
+
+main {
+  // height: 3552px;
+  // height: 3568px;
+  // height: 3935px;
 }

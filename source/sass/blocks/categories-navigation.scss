@@ -1,0 +1,37 @@
+.categories-navigation {
+  @include list-reset();
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 540px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-bottom: 12px;
+}
+
+.categories-navigation__item {
+  margin: 5px 17.5px;
+}
+
+.categories-navigation__link {
+  line-height: 24px;
+  color: inherit;
+
+  transition: opacity 0.3s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .categories-navigation {
+    display: none;
+  }
+}
