@@ -6,7 +6,7 @@
   align-items: flex-start;
   justify-content: flex-end;
   width: 235px;
-  padding-top: 12px;
+  padding-top: 5px;
 
   font-size: 14px;
 }
@@ -41,7 +41,7 @@
 @media (max-width: $tablet-width) {
   .user-navigation {
     width: 25px;
-    padding-top: 24px;
+    padding-top: 11px;
   }
 
   .user-navigation__item--burger-menu {
@@ -60,6 +60,6 @@
 
 @media (max-width: $mobile-width) {
   .user-navigation {
-    padding-top: 17px;
+    padding-top: 11px;
   }
 }

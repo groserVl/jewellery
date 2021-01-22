@@ -9,6 +9,7 @@
   margin-bottom: 6px;
 
   font: inherit;
+  text-align: center;
 }
 
 .product p {
@@ -20,5 +21,18 @@
 }
 
 .product img {
-  display: flex;
+  display: block;
+  width: 100%;
+}
+
+@media (max-width: $tablet-width) {
+  .product h3 {
+    margin-top: 17px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .product h3 {
+    margin-top: 10px;
+  }
 }

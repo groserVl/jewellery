@@ -1,5 +1,6 @@
 .new-goods {
   padding-top: 120px;
+  padding-bottom: 70px;
 }
 
 .new-goods__title-wrap {
@@ -16,4 +17,33 @@
 
 .new-goods a {
   padding-bottom: 0;
+}
+
+@media (max-width: $tablet-width) {
+  .new-goods {
+    padding-top: 69px;
+    padding-bottom: 30px;
+  }
+
+  .new-goods__title-wrap {
+    margin-bottom: 49px;
+  }
+
+  .new-goods h2 {
+    margin-bottom: 18px;
+  }
+
+  .new-goods a {
+    padding-bottom: 5px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .new-goods {
+    padding-top: 59px;
+  }
+
+  .new-goods__title-wrap {
+    margin-bottom: 40px;
+  }
 }

@@ -1,6 +1,7 @@
 .nav__wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-bottom: 13px;
 }
 
@@ -50,8 +51,6 @@
     position: relative;
 
     display: block;
-    margin-top: 24px;
-
     width: 25px;
     height: 16px;
 
@@ -94,9 +93,5 @@
 
   .nav__logo {
     width: 52px;
-  }
-
-  .nav__toggle {
-    margin-top: 17px;
   }
 }

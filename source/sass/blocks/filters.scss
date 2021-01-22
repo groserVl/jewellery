@@ -1,0 +1,197 @@
+.filters {
+  width: 250px;
+  margin-right: 50px;
+}
+
+.filters__fieldset-wrapper {
+  padding-top: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  border: 1px solid $brown;
+  border-bottom: transparent;
+}
+
+.filters__fieldset-wrapper--border {
+  margin-bottom: 35px;
+
+  border-bottom: 1px solid $brown;
+}
+
+.filters__fieldset-wrapper fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.filters__fieldset-wrapper legend {
+  position: relative;
+
+  width: 100%;
+  padding-bottom: 20px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 0;
+
+    width: 17px;
+    height: 8px;
+
+    background-image: url("../img/svg/down-arrow-desktop.svg");
+  }
+}
+
+.filters__list {
+  @include list-reset(18px);
+
+  margin-bottom: 27px;
+}
+
+.filters__fieldset-wrapper li {
+  margin-bottom: 8px;
+}
+
+.filters__product-list input,
+.filters__material-list input,
+.filters__collection-list input {
+  display: none;
+}
+
+.filters__product-list label,
+.filters__material-list label,
+.filters__collection-list label {
+  position: relative;
+
+  font-size: 14px;
+  left: 18px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: -26px;
+
+    width: 16px;
+    height: 15px;
+
+    border: 1px solid $brown;
+  }
+}
+
+.filters input:checked + label {
+  &::before {
+    background-color: $brown;
+  }
+}
+
+// Поле стоимость
+.filters__range-controls {
+  position: relative;
+  margin-bottom: 12px;
+  padding-top: 6px;
+}
+
+.filters__range-scale {
+  width: 200px;
+  height: 1px;
+  background-color: $gray;
+}
+
+.filters__range-bar {
+  width: 90px;
+  height: 1px;
+  margin-left: 59px;
+
+  background-color: $brown;
+}
+
+.filters__toggle {
+  position: absolute;
+  top: -1px;
+  left: 0;
+
+  width: 15px;
+  height: 15px;
+
+  border-radius: 50%;
+
+  background-color: $brown;
+}
+
+.filters__toggle-min {
+  left: 45px;
+}
+
+.filters__toggle-max {
+  left: 150px;
+}
+
+.filters__range-price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 17px;
+  padding-left: 36px;
+  padding-right: 11px;
+}
+
+.filters__range-price input {
+  width: 50px;
+
+  font-size: 14px;
+  line-height: 18px;
+
+  border: none;
+  background-color: transparent;
+}
+
+.filters__button {
+  margin-bottom: 25px;
+}
+
+.filters__button--white {
+  color: $text;
+
+  background-color: $bg;
+
+  &:hover,
+  &:focus {
+    color: $bg;
+
+    background-color: $brown;
+  }
+}
+
+.filters__list label,
+.filters__list input {
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  cursor: pointer;
+}
+
+.filters__tablet-button {
+  display: none;
+}
+
+.filters__list--hidden {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .filters {
+    width: 100%;
+  }
+
+  .filters form {
+    display: none;
+  }
+
+  .filters__tablet-button {
+    display: block;
+  }
+}

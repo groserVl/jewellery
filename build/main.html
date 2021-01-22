@@ -19,7 +19,7 @@
       background-repeat: no-repeat;
       background-position:  50% 0;
       /* Desktop layout by default */
-      background-image: url("pixel/main-desktop.jpg");
+      /* background-image: url("pixel/main-desktop.jpg"); */
     }
     /* Tablet */
     /* @media ( max-width: 1023px ) { */
@@ -34,7 +34,7 @@
     @media ( max-width: 320px ) {
       HTML {
         /* Mobile layout */
-        /* background-image: url("pixel/main-mobile.jpg"); */
+        background-image: url("pixel/main-mobile.jpg");
       }
     }
   </style>
@@ -198,7 +198,7 @@
                 <div class="product">
                   <a href="#">
                     <picture>
-                      <!-- 1x: 270px; 2x: 540px  -->
+                      <!-- 1x: 270px; 2x: 540px -->
                       <source type="image/webp" srcset="img/slider/product-slider-4-desktop1x.webp 1x, img/slider/product-slider-4-desktop2x.webp 2x">
 
                       <!-- 1x: 270px; 2x: 540px  -->
@@ -213,19 +213,18 @@
           </div>
           <div class="slider__controls">
             <button class="slider__button slider__button--prev" type="button">
-              <svg width="30" height="11" role="img" aria-label="Предыдущие товары" fill="">
-                <use xlink:href="img/sprite_auto.svg#icon-arrow-preview"></use>
-              </svg>
+              <span class="visually-hidden">Предыдущие товары</span>
             </button>
             <button class="slider__button slider__button--next" type="button">
-              <svg width="30" height="11" role="img" aria-label="Следующие товары товары" fill="">
-                <use xlink:href="img/sprite_auto.svg#icon-arrow-next"></use>
-              </svg>
+              <span class="visually-hidden">Следующие товары</span>
             </button>
             <div class="slider__dots">
               <span class="slider__dot active">1</span>
-              <span class="slider__dot"></span>2
-              <span class="slider__dot"></span>3
+              <span class="slider__dot">2</span>
+              <span class="slider__dot">3</span>
+              <span class="slider__dot slider__dot--hidden">4</span>
+              <span class="slider__dot slider__dot--hidden">5</span>
+              <span class="slider__dot slider__dot--hidden">6</span>
             </div>
           </div>
 
@@ -276,24 +275,23 @@
       <div class="container">
         <h2>Frequently asked questions</h2>
         <ul class="questions__list">
-          <li class="questions__item questions__item--active">
+          <li class="questions__item questions__item--width-large questions__item--active">
             <h3>What materials are the jewellery made of?</h3>
             <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
           </li>
-          <li class="questions__item">
+          <li class="questions__item questions__item--width-small">
             <h3>Which countries do you deliver to?</h3>
             <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
           </li>
-          <li class="questions__item">
+          <li class="questions__item questions__item--width-medium">
             <h3>What are the payment methods?</h3>
             <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
           </li>
-          <li class="questions__item">
-            <h3>Can I return the jewellery if it didn’t fit me?</h3>
+          <li class="questions__item questions__item--width-long">
+            <h3>Can I return the <br class="questions__transfer"> jewellery if it didn’t fit me?</h3>
             <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
           </li>
         </ul>
-
       </div>
     </section>
 
@@ -307,7 +305,7 @@
           <li class="gallery__item  gallery__item--width-img-1">
             <div class="gallery__img">
               <picture>
-                <!-- 1x: 130px; 2x: 260px  -->
+                <!-- 1x: 130px; 2x: 260px -->
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/gallery/gallery-1-mobile1x.webp 1x, img/gallery/gallery-1-mobile2x.webp 2x">
                 <!-- 1x: 133px; 2x: 266px  -->
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/gallery/gallery-1-tablet1x.webp 1x, img/gallery/gallery-1-tablet2x.webp 2x">

@@ -5,8 +5,6 @@
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 285px 300px;
-  // background-size: 50% 100%;
-  // background-size: cover;
   background-color: $gray;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -30,7 +28,6 @@
 }
 
 .article--trends-img {
-  display: flex;
   padding-top: 330px;
 
   background-image: url("../img/blog/blog-3-desktop1x.jpg");
@@ -58,7 +55,6 @@
 
 .article--trends-img .article__info {
   height: 300px;
-  // margin-top: auto;
 
   background-color: $gray;
 }
@@ -83,4 +79,89 @@
   font-size: 14px;
   line-height: 15px;
   color: #9b9997;
+}
+
+@media (max-width: $tablet-width) {
+  .article {
+    height: 300px;
+    background-image: url("../img/blog/blog-1-tablet1x.jpg");
+    background-size: 339px 300px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/blog/blog-1-tablet2x.jpg");
+    }
+  }
+
+  .article--crystals-img {
+    background-image: url("../img/blog/blog-2-tablet1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/blog/blog-2-tablet2x.jpg");
+    }
+  }
+
+  .article--crystals-img .article__info {
+    padding: 68px 88px;
+  }
+
+  .article--trends-img {
+    padding-top: 0;
+
+    background-image: url("../img/blog/blog-3-tablet1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/blog/blog-3-tablet2x.jpg");
+    }
+  }
+
+  .article--trends-img .article__info {
+    padding: 86px 7%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .article {
+    height: 100%;
+    background-image: url("../img/blog/blog-1-mobile1x.jpg");
+    background-size: 290px 256px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/blog/blog-1-mobile2x.jpg");
+    }
+  }
+
+  .article--crystals-img {
+    background-image: url("../img/blog/blog-2-mobile1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/blog/blog-2-mobile2x.jpg");
+    }
+  }
+
+  .article--trends-img {
+    background-image: url("../img/blog/blog-3-mobile1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/blog/blog-3-mobile2x.jpg");
+    }
+  }
+
+  .article--trends-img div.article__info {
+    height: auto;
+    padding-top: 321px;
+    padding-bottom: 66px;
+
+    background: none;
+  }
+
+  .article--crystals-img .article__info {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .article .article__info {
+    width: 100%;
+    padding-top: 300px;
+    padding-bottom: 50px;
+  }
 }
