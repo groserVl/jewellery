@@ -41,11 +41,22 @@
 @media (max-width: $tablet-width) {
   .user-navigation {
     width: 25px;
-    padding-top: 11px;
   }
 
-  .user-navigation__item--burger-menu {
+  .user-navigation__item--tablet {
     display: none;
+    position: absolute;
+    bottom: -70px;
+    left: 0;
+
+    margin: 0;
+    margin-top: 30px;
+  }
+
+  .user-navigation__item--tablet a {
+    font-size: 18px;
+    line-height: 23px;
+    color: $bg;
   }
 
   .user-navigation__item--img-cart span,
@@ -60,6 +71,11 @@
 
 @media (max-width: $mobile-width) {
   .user-navigation {
+    width: 39px;
     padding-top: 11px;
+  }
+
+  .user-navigation__item--tablet {
+    bottom: -58px;
   }
 }

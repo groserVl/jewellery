@@ -18,7 +18,7 @@
   margin: 0;
   margin-bottom: 40px;
 
-  color: #9b9997;
+  color: $brown;
   white-space: nowrap;
 }
 
@@ -43,7 +43,7 @@
 
   &::placeholder {
     font-size: 14px;
-    color: #9b9997;
+    color: $brown;
   }
 
   &:hover,
@@ -118,7 +118,6 @@
     padding-right: 43px;
   }
 }
-
 
 @media (max-width: $mobile-width) {
   .subscription {

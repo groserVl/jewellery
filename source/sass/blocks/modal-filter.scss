@@ -1,0 +1,305 @@
+.modal-filter {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .modal-filter {
+    position: fixed;
+    top: 27px;
+    left: 0;
+    z-index: 100;
+
+    width: 423px;
+    padding-bottom: 40px;
+
+    background-color: $bg;
+    box-shadow: 0 5px 32px rgba(219, 213, 208, 0.24);
+  }
+
+  .modal-filter__button-close {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+
+    width: 32px;
+    height: 32px;
+
+    border: none;
+    background: none;
+    background-image: url("../img/svg/button-close-filter.svg");
+
+    cursor: pointer;
+  }
+
+  .modal-filter__fieldset-wrapper {
+    padding-left: 20px;
+    padding-right: 24px;
+    padding-bottom: 10px;
+
+    border-top: 1px solid $brown;
+  }
+
+  .modal-filter__fieldset-wrapper--border {
+    border-bottom: 1px solid $brown;
+  }
+
+  .modal-filter__fieldset-wrapper--border-hidden {
+    border-top-color: transparent;
+  }
+
+  .modal-filter__fieldset-wrapper fieldset {
+    margin: 0;
+    padding: 0;
+
+    border: none;
+  }
+
+  .modal-filter__fieldset-wrapper legend {
+    position: relative;
+
+    width: 100%;
+    padding-top: 33px;
+    padding-bottom: 25px;
+
+    font-size: 18px;
+    line-height: 23px;
+
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 39px;
+      right: 16px;
+
+      width: 24px;
+      height: 14px;
+
+      background-image: url("../img/svg/up-arrow-filters-tablet.svg");
+    }
+  }
+
+  legend.modal-filter__list--hidden {
+    &::after {
+      background-image: url("../img/svg/down-arrow-filters-tablet.svg");
+    }
+  }
+
+  .modal-filter__list {
+    @include list-reset(41px);
+
+    margin-bottom: 26px;
+  }
+
+  .modal-filter__fieldset-wrapper li {
+    margin-bottom: 17px;
+  }
+
+  .modal-filter__product-list input,
+  .modal-filter__material-list input,
+  .modal-filter__collection-list input {
+    display: none;
+  }
+
+  .modal-filter__product-list label,
+  .modal-filter__material-list label,
+  .modal-filter__collection-list label {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: -29px;
+
+      width: 18px;
+      height: 18px;
+
+      border: 1px solid $brown;
+    }
+  }
+
+  .modal-filter input:checked + label {
+    &::before {
+      background-color: $brown;
+    }
+  }
+
+  // Поле стоимость
+  .modal-filter__range-controls {
+    position: relative;
+    margin-bottom: 12px;
+    padding-top: 9px;
+  }
+
+  .modal-filter__range-scale {
+    width: 304px;
+    height: 1px;
+    background-color: $gray;
+  }
+
+  .modal-filter__range-bar {
+    width: 158px;
+    height: 1px;
+    margin-left: 75px;
+
+    background-color: $brown;
+  }
+
+  .modal-filter__toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background-color: $brown;
+  }
+
+  .modal-filter__toggle-min {
+    left: 57px;
+  }
+
+  .modal-filter__toggle-max {
+    left: 233px;
+  }
+
+  .modal-filter__range-price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    padding-top: 4px;
+    padding-left: 45px;
+    padding-right: 111px;
+  }
+
+  .modal-filter__range-price input {
+    width: 50px;
+
+    border: none;
+    background-color: transparent;
+  }
+
+  .modal-filter__button {
+    width: 362px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .modal-filter__button--white {
+    margin-top: 24px;
+
+    color: $text;
+
+    background-color: $bg;
+
+    &:hover,
+    &:focus {
+      color: $bg;
+
+      background-color: $brown;
+    }
+  }
+
+  .modal-filter__list label,
+  .modal-filter__list input {
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    cursor: pointer;
+  }
+
+  .modal-filter--show {
+    display: block;
+  }
+
+  // .modal-filter.modal-filter--nojs {
+  //   display: block;
+  // }
+
+  .modal-filter--nojs .modal-filter__material-list,
+  .modal-filter--nojs .modal-filter__collection-list {
+    display: block;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .modal-filter {
+    top: 76px;
+    left: 25px;
+    width: 270px;
+  }
+
+  .modal-filter__fieldset-wrapper legend {
+    padding-top: 23px;
+
+    &::after {
+      top: 29px;
+      right: -5px;
+    }
+  }
+
+  .modal-filter__fieldset-wrapper {
+    padding-bottom: 0;
+  }
+
+  .modal-filter__button-close {
+    right: -10px;
+  }
+
+  .modal-filter__range-scale {
+    width: 230px;
+  }
+
+  .modal-filter__range-bar {
+    width: 120px;
+    margin-left: 48px;
+  }
+
+  .modal-filter__toggle-min {
+    left: 31px;
+  }
+
+  .modal-filter__toggle-max {
+    left: 168px;
+  }
+
+  .modal-filter__range-price {
+    padding-left: 20px;
+    padding-right: 25px;
+  }
+
+  .modal-filter__button {
+    width: 230px;
+    margin-top: 30px;
+  }
+
+  .modal-filter__button--white {
+    margin-top: 20px;
+  }
+}
+
+.modal-filter__list--hidden + ul,
+.modal-filter__list--hidden + div {
+  display: none;
+}
+
+.modal-filter--page {
+  display: block;
+}
+
+.modal-filter--page legend {
+  &::after {
+    background-image: url("../img/svg/up-arrow-filters-tablet.svg");
+  }
+}
+
+.modal-filter--page .modal-filter__button-close {
+  display: none;
+}

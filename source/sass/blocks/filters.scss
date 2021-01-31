@@ -31,6 +31,8 @@
   width: 100%;
   padding-bottom: 20px;
 
+  cursor: pointer;
+
   &::after {
     content: "";
     position: absolute;
@@ -40,6 +42,12 @@
     width: 17px;
     height: 8px;
 
+    background-image: url("../img/svg/up-arrow-desktop.svg");
+  }
+}
+
+legend.filters__list--hidden {
+  &::after {
     background-image: url("../img/svg/down-arrow-desktop.svg");
   }
 }
@@ -178,8 +186,14 @@
   display: none;
 }
 
-.filters__list--hidden {
-  display: none;
+.filters--nojs .filters__list {
+  display: block;
+}
+
+.filters--nojs legend {
+  &::after {
+    background-image: url("../img/svg/up-arrow-desktop.svg");
+  }
 }
 
 @media (max-width: $tablet-width) {
@@ -193,5 +207,13 @@
 
   .filters__tablet-button {
     display: block;
+    padding-top: 20px;
+
+    text-align: center;
   }
+}
+
+.filters__list--hidden + ul,
+.filters__list--hidden + div {
+  display: none;
 }

@@ -30,6 +30,8 @@
 
   border-bottom: 1px solid #a87b62;
 
+  cursor: pointer;
+
   &::before {
     content: "";
     position: absolute;
@@ -71,6 +73,17 @@
 
 .questions__transfer {
   display: none;
+}
+
+// Без JS
+.questions--nojs p {
+  display: block;
+}
+
+.questions--nojs .questions__item {
+  &::before {
+    background-image: url("../img/svg/up-arrow-desktop.svg");
+  }
 }
 
 @media (max-width: $tablet-width) {

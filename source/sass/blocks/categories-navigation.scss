@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   width: 540px;
   margin: 0 auto;
-  padding-top: 30px;
+  padding-top: 25px;
   padding-left: 10px;
   padding-bottom: 12px;
 }
@@ -33,5 +33,26 @@
 @media (max-width: $tablet-width) {
   .categories-navigation {
     display: none;
+    width: auto;
+    padding: 0;
+    padding-top: 7px;
+    padding-bottom: 19px;
+  }
+
+  .categories-navigation__item {
+    margin: 0;
+    margin-bottom: 21px;
+  }
+
+  .categories-navigation__link {
+    font-size: 24px;
+    line-height: 36px;
+    color: $bg;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .categories-navigation {
+    padding-bottom: 10px;
   }
 }

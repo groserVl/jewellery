@@ -1,0 +1,31 @@
+.product-card {
+  display: flex;
+  margin-top: 70px;
+}
+
+.product-card__img-container {
+  padding-top: 13px;
+}
+
+@media (max-width: $tablet-width) {
+  .product-card {
+    justify-content: center;
+    margin-top: 17px;
+  }
+
+  .product-card__img-container {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .product-card {
+    display: block;
+    width: 290px;
+    margin: 0 auto;
+  }
+
+  .product-card__img-container {
+    padding-top: 0;
+  }
+}

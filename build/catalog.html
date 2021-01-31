@@ -12,111 +12,82 @@
   <link rel="preload" href="fonts/cormorantgaramond-semibold.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/cormorantgaramond-bold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
-
-  <!-- Pixel Glass -->
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position:  50% 0;
-      /* Desktop layout by default */
-      /* background-image: url("pixel/main-desktop.jpg"); */
-      /* background-image: url("pixel/catalog-desktop.jpg"); */
-    }
-    /* Tablet */
-    /* @media ( max-width: 1023px ) { */
-    @media ( min-width: 768px) and (max-width: 1023px) {
-      HTML {
-        /* Tablet layout */
-        /* background-image: url("pixel/main-tablet.jpg"); */
-        /* background-image: url("pixel/catalog-tablet.jpg"); */
-      }
-    }
-    /* Mobile */
-    /* @media ( max-width: 767px ) { */
-    @media ( max-width: 320px ) {
-      HTML {
-        /* Mobile layout */
-        /* background-image: url("pixel/main-mobile.jpg"); */
-        background-image: url("pixel/catalog-mobile.jpg");
-      }
-    }
-  </style>
-
-
-  <link href="../pixel/styles.css" rel="stylesheet">
-  <script src="../pixel/script.js"></script>
 </head>
 
 <body>
-  <header class="header">
-    <nav class="header__nav nav">
-      <div class="nav__wrapper container">
-        <button class="nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <form class="nav__search search" action="#" method="GET">
-          <button type="submit">
-            <svg class="" width="14" height="14" role="img" aria-label="Иконка телефона" fill="">
-              <use xlink:href="img/sprite_auto.svg#icon-search"></use>
-            </svg>
-            <span class="visually-hidden">Найти</span>
+  <header class="header header--nojs">
+    <div class="container">
+      <nav class="header__nav nav">
+        <div class="nav__wrapper">
+          <button class="nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
           </button>
-          <label class="visually-hidden" for="search">Type here to search</label>
-          <input type="text" id="search" name="search" placeholder="Type here to search">
-        </form>
-
-        <a class="nav__logo" href="main.html">
-          <img src="img/svg/logo.svg" width="66" height="66" alt="Логотип">
-          <span class="visually-hidden">На главную</span>
-        </a>
-
-        <ul class="nav__user-list user-navigation">
-          <li class="user-navigation__item user-navigation__item--burger-menu">
-            <a class="user-navigation__link" href="">Login</a>
-          </li>
-          <li class="user-navigation__item user-navigation__item--img-cart">
-            <a class="user-navigation__link" href="#">Cart</a>
-            <span>0</span>
-            <a class="user-navigation__link-img" href="#">
-              <svg width="20" height="18" role="img" aria-label="Иконка корзины" fill="none">
-                <use xlink:href="img/sprite_auto.svg#icon-cart"></use>
+          <form class="nav__search search" action="#" method="GET">
+            <button type="submit">
+              <svg width="14" height="14" role="img" aria-label="Иконка телефона" fill="#000000">
+                <use xlink:href="img/sprite_auto.svg#icon-search"></use>
               </svg>
-            </a>
+              <span class="visually-hidden">Найти</span>
+            </button>
+            <label class="visually-hidden" for="search">Type here to search</label>
+            <input type="text" id="search" name="search" placeholder="Type here to search">
+          </form>
 
+          <a class="nav__logo" href="main.html">
+            <svg class="nav__logo-image" width="66" height="66" role="img" aria-label="Логотип" fill="#a87b62">
+              <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+            </svg>
+            <span class="visually-hidden">На главную</span>
+          </a>
+
+          <ul class="nav__user-list user-navigation">
+            <li class="user-navigation__item user-navigation__item--tablet">
+              <a class="user-navigation__link user-navigation__link-login" href="login.html">Login</a>
+            </li>
+            <li class="user-navigation__item user-navigation__item--img-cart">
+              <a class="user-navigation__link" href="#">Cart</a>
+              <span>0</span>
+              <a class="user-navigation__link-img" href="#">
+                <svg class="user-navigation__image" width="20" height="18" role="img" aria-label="Иконка корзины" fill="none" stroke="#1d1613">
+                  <use xlink:href="img/sprite_auto.svg#icon-cart"></use>
+                </svg>
+              </a>
+
+            </li>
+          </ul>
+        </div>
+        <div class="nav__categories-wrapper">
+          <ul class="nav__categories-list categories-navigation">
+            <li class="categories-navigation__item">
+              <a class="categories-navigation__link" href="#">What’s new</a>
+            </li>
+            <li class="categories-navigation__item">
+              <a class="categories-navigation__link" href="#">Chokers</a>
+            </li>
+            <li class="categories-navigation__item">
+              <a class="categories-navigation__link" href="#">Necklaces</a>
+            </li>
+            <li class="categories-navigation__item">
+              <a class="categories-navigation__link" href="#">Rings</a>
+            </li>
+            <li class="categories-navigation__item">
+              <a class="categories-navigation__link" href="#">Earrings</a>
+            </li>
+          </ul>
+        </div>
+        <ul class="nav__about-list">
+          <li class="nav__about-item">
+            <a class="nav__about-link" href="#">About CH</a>
+          </li>
+          <li class="nav__about-item">
+            <a class="nav__about-link" href="#">Stores & Hours</a>
+          </li>
+          <li class="nav__about-item">
+            <a class="nav__about-link" href="#">Contact Us</a>
           </li>
         </ul>
-      </div>
-      <div class="nav__categories-wrapper">
-        <ul class="nav__categories-list categories-navigation">
-          <li class="categories-navigation__item">
-            <a class="categories-navigation__link" href="#">What’s new</a>
-          </li>
-          <li class="categories-navigation__item">
-            <a class="categories-navigation__link" href="#">Chokers</a>
-          </li>
-          <li class="categories-navigation__item">
-            <a class="categories-navigation__link" href="#">Necklaces</a>
-          </li>
-          <li class="categories-navigation__item">
-            <a class="categories-navigation__link" href="#">Rings</a>
-          </li>
-          <li class="categories-navigation__item">
-            <a class="categories-navigation__link" href="#">Earrings</a>
-          </li>
-        </ul>
-      </div>
-      <ul class="nav__about-list">
-        <li class="nav__about-item">
-          <a class="nav__about-link" href="#">About CH</a>
-        </li>
-        <li class="nav__about-item">
-          <a class="nav__about-link" href="#">Stores & Hours</a>
-        </li>
-        <li class="nav__about-item">
-          <a class="nav__about-link" href="#">Contact Us</a>
-        </li>
-      </ul>
-    </nav>
+      </nav>
+    </div>
   </header>
 
   <main class="main-catalog">
@@ -126,51 +97,51 @@
     </div>
     <div class="container">
       <div class="main-catalog__wrapper">
-        <section class="filters">
+        <section class="filters filters--nojs">
           <h2 class="visually-hidden">Filters</h2>
           <form action="https://echo.htmlacademy.ru" method="POST">
             <div class="filters__fieldset-wrapper">
               <fieldset>
                 <legend>Product</legend>
-                  <ul class="filters__product-list filters__list">
-                    <li>
-                      <input type="checkbox" name="product" id="product-necklaces" value="Necklaces" checked="">
-                      <label for="product-necklaces">Necklaces</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" name="product" id="product-chokers" value="Chokers" checked="">
-                      <label for="product-chokers">Chokers</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" name="product" id="product-rings" value="Rings">
-                      <label for="product-rings">Rings</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" name="product" id="product-earrings" value="Earrings" checked="">
-                      <label for="product-earrings">Earrings</label>
-                    </li>
-                  </ul>
+                <ul class="filters__product-list filters__list">
+                  <li>
+                    <input type="checkbox" name="product" id="product-necklaces" value="Necklaces" checked="">
+                    <label for="product-necklaces">Necklaces</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="product" id="product-chokers" value="Chokers" checked="">
+                    <label for="product-chokers">Chokers</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="product" id="product-rings" value="Rings">
+                    <label for="product-rings">Rings</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="product" id="product-earrings" value="Earrings" checked="">
+                    <label for="product-earrings">Earrings</label>
+                  </li>
+                </ul>
               </fieldset>
             </div>
             <div class="filters__fieldset-wrapper">
               <fieldset>
-                <legend>Material</legend>
-                  <ul class="filters__material-list filters__list filters__list--hidden">
-                    <li>
-                      <input type="checkbox" name="material" id="material-gold" value="Gold">
-                      <label for="material-gold">Gold</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" name="material" id="material-silver" value="Silver">
-                      <label for="material-silver">Silver</label>
-                    </li>
-                  </ul>
+                <legend class="filters__list--hidden">Material</legend>
+                <ul class="filters__material-list filters__list">
+                  <li>
+                    <input type="checkbox" name="material" id="material-gold" value="Gold">
+                    <label for="material-gold">Gold</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="material" id="material-silver" value="Silver">
+                    <label for="material-silver">Silver</label>
+                  </li>
+                </ul>
               </fieldset>
             </div>
             <div class="filters__fieldset-wrapper">
               <fieldset>
-                <legend>Collection</legend>
-                  <ul class="filters__collection-list filters__list filters__list--hidden">
+                <legend class="filters__list--hidden">Collection</legend>
+                  <ul class="filters__collection-list filters__list">
                     <li>
                       <input type="checkbox" name="collection" id="collection-pink-flamingo" value="Pink Flamingo">
                       <label for="collection-pink-flamingo">Pink Flamingo</label>
@@ -185,25 +156,27 @@
             <div class="filters__fieldset-wrapper filters__fieldset-wrapper--border">
               <fieldset>
                 <legend>Price</legend>
-                <div class="filters__range-controls">
-                  <div class="filters__range-scale">
-                    <div class="filters__range-bar"></div>
+                <div class="filters__range-wrapper">
+                  <div class="filters__range-controls">
+                    <div class="filters__range-scale">
+                      <div class="filters__range-bar"></div>
+                    </div>
+                    <div class="filters__toggle filters__toggle-min"></div>
+                    <div class="filters__toggle filters__toggle-max"></div>
                   </div>
-                  <div class="filters__toggle filters__toggle-min"></div>
-                  <div class="filters__toggle filters__toggle-max"></div>
-                </div>
-                <div class="filters__range-price">
-                  <label class="visually-hidden" for="min-price">Стоимость от</label>
-                  <input type="text" name="min-price" id="min-price" value="$ 55">
-                  <label class="visually-hidden" for="max-price">Стоимость до</label>
-                  <input type="text" name="max-price" id="max-price" value="$ 155">
+                  <div class="filters__range-price">
+                    <label class="visually-hidden" for="min-price">Стоимость от</label>
+                    <input type="text" name="min-price" id="min-price" value="$ 55">
+                    <label class="visually-hidden" for="max-price">Стоимость до</label>
+                    <input type="text" name="max-price" id="max-price" value="$ 155">
+                  </div>
                 </div>
               </fieldset>
             </div>
             <button class="filters__button button" type="submit">Apply</button>
             <button class="filters__button button filters__button--white" type="button">Clear All</button>
           </form>
-          <button class="filters__tablet-button button" type="button">Filter</button>
+          <a class="filters__tablet-button button" href="filter.html">Filter</a>
         </section>
         <section class="catalog">
           <h2 class="visually-hidden">Catalog</h2>
@@ -596,6 +569,113 @@
       </div>
     </div>
   </footer>
+
+  <section class="modal-login">
+    <button class="modal-login__button-close button-close" type="button" tabindex="0">
+      <span class="visually-hidden">Закрыть модальное окно</span>
+    </button>
+    <h2>Log In</h2>
+    <form action="https://echo.htmlacademy.ru" method="POST">
+      <p class="modal-login__email-wrapper">
+        <label class="visually-hidden" for="user-email">Your e-mail:</label>
+        <input id="user-email" type="email" name="email" placeholder="Your E-mail" required="">
+      </p>
+      <p class="modal-login__password-wrapper">
+        <label class="visually-hidden" for="user-password">Password</label>
+        <input id="user-password" type="password" name="password" placeholder="Password" required="">
+        <a href="#">Forgot your password?</a>
+      </p>
+      <button class="modal-login__button button" type="submit">Log In</button>
+      <div class="modal-login__sign-up">
+        <p>Don’t have an account?</p>
+        <a href="#">Sign up</a>
+      </div>
+    </form>
+  </section>
+
+  <section class="modal-filter modal-filter--nojs">
+    <h2 class="visually-hidden">Filters pop up</h2>
+      <button class="modal-filter__button-close" type="button">
+        <span class="visually-hidden">Close</span>
+      </button>
+      <form action="https://echo.htmlacademy.ru" method="POST">
+        <div class="modal-filter__fieldset-wrapper modal-filter__fieldset-wrapper--border-hidden">
+          <fieldset>
+            <legend>Product</legend>
+            <ul class="modal-filter__product-list modal-filter__list">
+              <li>
+                <input type="checkbox" name="product" id="necklaces" value="Necklaces" checked="">
+                <label for="necklaces">Necklaces</label>
+              </li>
+              <li>
+                <input type="checkbox" name="product" id="chokers" value="Chokers" checked="">
+                <label for="chokers">Chokers</label>
+              </li>
+              <li>
+                <input type="checkbox" name="product" id="rings" value="Rings">
+                <label for="rings">Rings</label>
+              </li>
+              <li>
+                <input type="checkbox" name="product" id="earrings" value="Earrings" checked="">
+                <label for="earrings">Earrings</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="modal-filter__fieldset-wrapper">
+          <fieldset>
+            <legend class="modal-filter__list--hidden">Material</legend>
+            <ul class="modal-filter__material-list modal-filter__list">
+              <li>
+                <input type="checkbox" name="material" id="gold" value="Gold">
+                <label for="gold">Gold</label>
+              </li>
+              <li>
+                <input type="checkbox" name="material" id="silver" value="Silver">
+                <label for="silver">Silver</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="modal-filter__fieldset-wrapper">
+          <fieldset>
+            <legend class="modal-filter__list--hidden">Collection</legend>
+              <ul class="modal-filter__collection-list modal-filter__list">
+                <li>
+                  <input type="checkbox" name="collection" id="pink-flamingo" value="Pink Flamingo">
+                  <label for="pink-flamingo">Pink Flamingo</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="collection" id="dreams" value="Dreams">
+                  <label for="dreams">Dreams</label>
+                </li>
+              </ul>
+          </fieldset>
+        </div>
+        <div class="modal-filter__fieldset-wrapper modal-filter__fieldset-wrapper--border">
+          <fieldset>
+            <legend>Price</legend>
+            <div class="modal-filter__range-wrapper">
+              <div class="modal-filter__range-controls">
+                <div class="modal-filter__range-scale">
+                  <div class="modal-filter__range-bar"></div>
+                </div>
+                <div class="modal-filter__toggle modal-filter__toggle-min"></div>
+                <div class="modal-filter__toggle modal-filter__toggle-max"></div>
+              </div>
+              <div class="modal-filter__range-price">
+                <label class="visually-hidden" for="minimum">Стоимость от</label>
+                <input type="text" name="min-price" id="minimum" value="$ 55">
+                <label class="visually-hidden" for="maximum">Стоимость до</label>
+                <input type="text" name="max-price" id="maximum" value="$ 155">
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <button class="modal-filter__button button" type="submit">Apply</button>
+        <button class="modal-filter__button button modal-filter__button--white" type="button">Clear All</button>
+      </form>
+  </section>
 
   <div class="modal-overlay"></div>
 

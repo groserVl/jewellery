@@ -1,0 +1,159 @@
+.modal-login {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  z-index: 100;
+
+  display: none;
+  padding-top: 188px;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-bottom: 45px;
+
+  width: 430px;
+
+  background-image: url("../img/modal/mod-log-desktop1x.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+  background-color: $gray;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/modal/mod-log-desktop2x.jpg");
+  }
+
+  transform: translateX(-50%);
+}
+
+.modal-login__button-close {
+  top: 18px;
+  right: 20px;
+}
+
+.modal-login h2 {
+  @include h2(24px);
+
+  text-align: center;
+}
+
+.modal-login p {
+  margin: 0;
+}
+
+.modal-login input {
+  width: 100%;
+  padding: 10px 10px 10px 1px;
+
+  font-size: 14px;
+  line-height: 18px;
+
+  border: none;
+  border-bottom: 1px solid #1d1613;
+  background-color: transparent;
+
+  transition: opacity 0.3s;
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+p.modal-login__password-wrapper {
+  margin-top: 26px;
+  margin-bottom: 46px;
+}
+
+.modal-login__password-wrapper a {
+  display: block;
+  width: 140px;
+  margin-top: 5px;
+  margin-left: auto;
+
+  font-size: 12px;
+  line-height: 18px;
+  color: $darkgray;
+  text-align: right;
+
+  transition: opacity 0.3s;
+}
+
+.modal-login__sign-up {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+
+  font-size: 14px;
+  line-height: 21px;
+  color: $darkgray;
+}
+
+.modal-login__sign-up a {
+  margin-left: 6px;
+
+  color: $text;
+
+  transition: opacity 0.3s;
+}
+
+.modal-login input:hover::placeholder,
+.modal-login input:focus::placeholder,
+.modal-login__password-wrapper a:hover,
+.modal-login__password-wrapper a:focus,
+.modal-login__sign-up a:hover,
+.modal-login__sign-up a:focus {
+  opacity: 0.7;
+}
+
+.modal-login__password-wrapper a:active,
+.modal-login__sign-up a:active {
+  opacity: 0.3;
+}
+
+.modal-login.modal-login--nojs {
+  display: block;
+}
+
+@media (max-width: $tablet-width) {
+  .modal-login {
+    top: 80px;
+
+    width: 442px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .modal-login {
+    top: 49px;
+
+    width: 270px;
+
+    padding-top: 122px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 36px;
+  }
+
+  .modal-login__button-close {
+    top: 13px;
+    right: 15px;
+  }
+
+  .modal-login h2 {
+    margin-bottom: 18px;
+
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  p.modal-login__password-wrapper {
+    margin-top: 21px;
+    margin-bottom: 35px;
+  }
+}
+
+.modal-login--show {
+  display: block;
+}
