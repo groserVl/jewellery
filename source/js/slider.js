@@ -68,17 +68,6 @@
     });
   }
 
-
-
-  // sliderList.addEventListener('touchmove', function () {
-  //   count++;
-  //   if (count >= sliderItem.length / numbersItemsSlider) {
-  //     count = 0;
-  //   }
-  //   onButtonsControlsClick();
-  //   activeDot(count);
-  // });
-
   function onButtonsControlsClick() {
     if (sliderList) {
       sliderList.style.transform = 'translate(-' + count * (width + marginItems) + 'px)';
@@ -110,5 +99,40 @@
   }
 
   initDotsMobile();
+
+  // TOUCH
+  var startX = 0;
+  var dist = 0;
+  var swipeX = 10;
+
+  sliderList.addEventListener('touchstart', function(evt) {
+    var touchobj = evt.changedTouches[0];
+    startX = parseInt(touchobj.clientX, 10);
+  });
+
+  sliderList.addEventListener('touchmove', function(evt) {
+    var touchobj = evt.changedTouches[0];
+    dist = parseInt(touchobj.clientX, 10) - startX;
+  });
+
+  sliderList.addEventListener('touchend', function(evt) {
+    if (dist < -swipeX) {
+      count++;
+      if (count >= sliderItem.length / numbersItemsSlider) {
+        count = 0;
+      }
+      onButtonsControlsClick();
+      activeDot(count);
+    }
+
+    if (dist > swipeX) {
+      count--;
+      if (count < 0) {
+        count = sliderItem.length / numbersItemsSlider - 1;
+      }
+      onButtonsControlsClick();
+      activeDot(count);
+    }
+  });
 
 })();

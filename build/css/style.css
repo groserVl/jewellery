@@ -1009,7 +1009,9 @@ body {
   .slider__item a {
     width: 100%; }
   .slider__dots {
-    padding-top: 33px; } }
+    padding-top: 33px; }
+  .slider__button {
+    display: none; } }
 
 .product {
   display: -webkit-box;

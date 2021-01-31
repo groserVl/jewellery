@@ -129,7 +129,8 @@
   var modalLogin = document.querySelector('.modal-login');
   var modalAddToCart = document.querySelector('.modal-add-to-cart');
   var modalOverlay = document.querySelector('.modal-overlay');
-  var buttonCloseModal = document.querySelector('.button-close');
+  var buttonCloseModalLogin = document.querySelector('.modal-login__button-close');
+  var buttonCloseModalAddCart = document.querySelector('.modal-add-to-cart__button-close');
   var buttonAddToCart = document.querySelector('.card-info__button');
   var buttonLogin = document.querySelector('.user-navigation__link-login');
   var userEmail = document.querySelector('#user-email');
@@ -166,7 +167,8 @@
 
   // Фу-ия удаления обработчиков
   function closeEventListeners() {
-    buttonCloseModal.removeEventListener('click', onButtonCloseModalClick);
+    buttonCloseModalAddCart.removeEventListener('click', onButtonCloseModalClick);
+    buttonCloseModalLogin.removeEventListener('click', onButtonCloseModalClick);
     modalOverlay.removeEventListener('click', onModalOverlayClick);
     window.removeEventListener('keydown', onEscapeClick);
   }
@@ -178,7 +180,7 @@
 
     document.body.style.overflow = 'hidden';
 
-    buttonCloseModal.addEventListener('click', onButtonCloseModalClick);
+    buttonCloseModalAddCart.addEventListener('click', onButtonCloseModalClick);
     modalOverlay.addEventListener('click', onModalOverlayClick);
     window.addEventListener('keydown', onEscapeClick);
   }
@@ -198,7 +200,7 @@
     } catch (err) {
       userEmail.focus();
     }
-    buttonCloseModal.addEventListener('click', onButtonCloseModalClick);
+    buttonCloseModalLogin.addEventListener('click', onButtonCloseModalClick);
     modalOverlay.addEventListener('click', onModalOverlayClick);
     window.addEventListener('keydown', onEscapeClick);
   }
@@ -229,22 +231,6 @@
   }
 
 })();
-
-'use strict';
-// var pageHeader = document.querySelector('.page-header');
-// var headerToggle = document.querySelector('.page-header__toggle');
-
-// pageHeader.classList.remove('page-header--nojs');
-
-// headerToggle.addEventListener('click', function () {
-//   if (pageHeader.classList.contains('page-header--closed')) {
-//     pageHeader.classList.remove('page-header--closed');
-//     pageHeader.classList.add('page-header--opened');
-//   } else {
-//     pageHeader.classList.add('page-header--closed');
-//     pageHeader.classList.remove('page-header--opened');
-//   }
-// });
 
 'use strict';
 (function () {
@@ -316,17 +302,6 @@
     });
   }
 
-
-
-  // sliderList.addEventListener('touchmove', function () {
-  //   count++;
-  //   if (count >= sliderItem.length / numbersItemsSlider) {
-  //     count = 0;
-  //   }
-  //   onButtonsControlsClick();
-  //   activeDot(count);
-  // });
-
   function onButtonsControlsClick() {
     if (sliderList) {
       sliderList.style.transform = 'translate(-' + count * (width + marginItems) + 'px)';
@@ -358,5 +333,40 @@
   }
 
   initDotsMobile();
+
+  // TOUCH
+  var startX = 0;
+  var dist = 0;
+  var swipeX = 10;
+
+  sliderList.addEventListener('touchstart', function(evt) {
+    var touchobj = evt.changedTouches[0];
+    startX = parseInt(touchobj.clientX, 10);
+  });
+
+  sliderList.addEventListener('touchmove', function(evt) {
+    var touchobj = evt.changedTouches[0];
+    dist = parseInt(touchobj.clientX, 10) - startX;
+  });
+
+  sliderList.addEventListener('touchend', function(evt) {
+    if (dist < -swipeX) {
+      count++;
+      if (count >= sliderItem.length / numbersItemsSlider) {
+        count = 0;
+      }
+      onButtonsControlsClick();
+      activeDot(count);
+    }
+
+    if (dist > swipeX) {
+      count--;
+      if (count < 0) {
+        count = sliderItem.length / numbersItemsSlider - 1;
+      }
+      onButtonsControlsClick();
+      activeDot(count);
+    }
+  });
 
 })();

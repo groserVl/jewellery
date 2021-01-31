@@ -4,7 +4,8 @@
   var modalLogin = document.querySelector('.modal-login');
   var modalAddToCart = document.querySelector('.modal-add-to-cart');
   var modalOverlay = document.querySelector('.modal-overlay');
-  var buttonCloseModal = document.querySelector('.button-close');
+  var buttonCloseModalLogin = document.querySelector('.modal-login__button-close');
+  var buttonCloseModalAddCart = document.querySelector('.modal-add-to-cart__button-close');
   var buttonAddToCart = document.querySelector('.card-info__button');
   var buttonLogin = document.querySelector('.user-navigation__link-login');
   var userEmail = document.querySelector('#user-email');
@@ -41,7 +42,8 @@
 
   // Фу-ия удаления обработчиков
   function closeEventListeners() {
-    buttonCloseModal.removeEventListener('click', onButtonCloseModalClick);
+    buttonCloseModalAddCart.removeEventListener('click', onButtonCloseModalClick);
+    buttonCloseModalLogin.removeEventListener('click', onButtonCloseModalClick);
     modalOverlay.removeEventListener('click', onModalOverlayClick);
     window.removeEventListener('keydown', onEscapeClick);
   }
@@ -53,7 +55,7 @@
 
     document.body.style.overflow = 'hidden';
 
-    buttonCloseModal.addEventListener('click', onButtonCloseModalClick);
+    buttonCloseModalAddCart.addEventListener('click', onButtonCloseModalClick);
     modalOverlay.addEventListener('click', onModalOverlayClick);
     window.addEventListener('keydown', onEscapeClick);
   }
@@ -73,7 +75,7 @@
     } catch (err) {
       userEmail.focus();
     }
-    buttonCloseModal.addEventListener('click', onButtonCloseModalClick);
+    buttonCloseModalLogin.addEventListener('click', onButtonCloseModalClick);
     modalOverlay.addEventListener('click', onModalOverlayClick);
     window.addEventListener('keydown', onEscapeClick);
   }
