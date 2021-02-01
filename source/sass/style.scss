@@ -4,6 +4,10 @@
 @import "normalize";
 @import "mixins.scss";
 @import "core";
+@import "blocks/container";
+@import "blocks/button";
+@import "blocks/button-close";
+@import "blocks/link";
 @import "blocks/header";
 @import "blocks/nav";
 @import "blocks/search";
@@ -33,4 +37,5 @@
 @import "blocks/modal-add-to-cart";
 @import "blocks/modal-login";
 @import "blocks/modal-filter";
+@import "blocks/body";
 @import "blocks/modal-overlay";

@@ -1,6 +1,7 @@
 'use strict';
 (function() {
 
+  var body = document.querySelector('.body');
   var modalLogin = document.querySelector('.modal-login');
   var modalAddToCart = document.querySelector('.modal-add-to-cart');
   var modalOverlay = document.querySelector('.modal-overlay');
@@ -37,7 +38,7 @@
     }
     modalOverlay.classList.remove('modal-overlay--show');
 
-    document.body.style.overflow = 'visible';
+    body.classList.remove('body--overflow-hidden');
   }
 
   // Фу-ия удаления обработчиков
@@ -53,7 +54,7 @@
     modalAddToCart.classList.add('modal-add-to-cart--show');
     modalOverlay.classList.add('modal-overlay--show');
 
-    document.body.style.overflow = 'hidden';
+    body.classList.add('body--overflow-hidden');
 
     buttonCloseModalAddCart.addEventListener('click', onButtonCloseModalClick);
     modalOverlay.addEventListener('click', onModalOverlayClick);
@@ -65,7 +66,7 @@
     modalLogin.classList.add('modal-login--show');
     modalOverlay.classList.add('modal-overlay--show');
 
-    document.body.style.overflow = 'hidden';
+    body.classList.add('body--overflow-hidden');
 
     userEmail.focus();
 

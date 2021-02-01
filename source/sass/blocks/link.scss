@@ -1,0 +1,19 @@
+.link {
+  padding-bottom: 5px;
+
+  color: inherit;
+
+  border-bottom: 1px solid #a87b62;
+
+  transition: opacity 0.3s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+    border-color: transparent;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

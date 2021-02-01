@@ -48,6 +48,7 @@
 'use strict';
 (function() {
 
+  var body = document.querySelector('.body');
   var modalFilter = document.querySelector('.modal-filter');
   var buttonOpenFilter = document.querySelector('.filters__tablet-button');
   var buttonCloseFilter = document.querySelector('.modal-filter__button-close');
@@ -68,8 +69,7 @@
     modalFilter.classList.add('modal-filter--show');
     modalOverlay.classList.add('modal-overlay--show');
 
-    document.body.style.overflow = 'hidden';
-
+    body.classList.add('body--overflow-hidden');
 
     buttonCloseFilter.addEventListener('click', onButtonCloseModalClick);
     modalOverlay.addEventListener('click', onModalOverlayClick);
@@ -84,7 +84,7 @@
     }
     modalOverlay.classList.remove('modal-overlay--show');
 
-    document.body.style.overflow = 'visible';
+    body.classList.remove('body--overflow-hidden');
   }
 
   // Фу-ия удаления обработчиков
@@ -126,6 +126,7 @@
 'use strict';
 (function() {
 
+  var body = document.querySelector('.body');
   var modalLogin = document.querySelector('.modal-login');
   var modalAddToCart = document.querySelector('.modal-add-to-cart');
   var modalOverlay = document.querySelector('.modal-overlay');
@@ -162,7 +163,7 @@
     }
     modalOverlay.classList.remove('modal-overlay--show');
 
-    document.body.style.overflow = 'visible';
+    body.classList.remove('body--overflow-hidden');
   }
 
   // Фу-ия удаления обработчиков
@@ -178,7 +179,7 @@
     modalAddToCart.classList.add('modal-add-to-cart--show');
     modalOverlay.classList.add('modal-overlay--show');
 
-    document.body.style.overflow = 'hidden';
+    body.classList.add('body--overflow-hidden');
 
     buttonCloseModalAddCart.addEventListener('click', onButtonCloseModalClick);
     modalOverlay.addEventListener('click', onModalOverlayClick);
@@ -190,7 +191,7 @@
     modalLogin.classList.add('modal-login--show');
     modalOverlay.classList.add('modal-overlay--show');
 
-    document.body.style.overflow = 'hidden';
+    body.classList.add('body--overflow-hidden');
 
     userEmail.focus();
 
@@ -243,7 +244,7 @@
   var buttonNext = document.querySelector('.slider__button--next');
   var buttonPrev = document.querySelector('.slider__button--prev');
   var dotMobile = document.querySelector('.slider__dot-mobile');
-  var dotsNumderMobile = document.querySelector('.slider__dots-numder-mobile');
+  var dotsNumdersMobile = document.querySelector('.slider__dots-numder-mobile');
   var viewport = 1024;
   var numbersItemsSliderDesktop = 4;
   var numbersItemsSliderTablet = 2;
@@ -254,9 +255,11 @@
 
 
   function init() {
-    if (body.offsetWidth < viewport) {
-      numbersItemsSlider = numbersItemsSliderTablet;
-    } else { numbersItemsSlider = numbersItemsSliderDesktop;
+    if (body) {
+      if (body.offsetWidth < viewport) {
+        numbersItemsSlider = numbersItemsSliderTablet;
+      } else { numbersItemsSlider = numbersItemsSliderDesktop;
+      }
     }
 
     if (slider) {
@@ -311,9 +314,9 @@
 
   // Dots
   function initDotsMobile() {
-    if (dotsNumderMobile) {
+    if (dotsNumdersMobile) {
       var numItems = sliderItem.length / numbersItemsSliderTablet;
-    dotsNumderMobile.textContent = numItems;
+    dotsNumdersMobile.textContent = numItems;
     }
   }
 
@@ -339,34 +342,37 @@
   var dist = 0;
   var swipeX = 10;
 
-  sliderList.addEventListener('touchstart', function(evt) {
-    var touchobj = evt.changedTouches[0];
-    startX = parseInt(touchobj.clientX, 10);
-  });
+  if (sliderList) {
+    sliderList.addEventListener('touchstart', function(evt) {
+      var touchobj = evt.changedTouches[0];
+      startX = parseInt(touchobj.clientX, 10);
+    });
 
-  sliderList.addEventListener('touchmove', function(evt) {
-    var touchobj = evt.changedTouches[0];
-    dist = parseInt(touchobj.clientX, 10) - startX;
-  });
+    sliderList.addEventListener('touchmove', function(evt) {
+      var touchobj = evt.changedTouches[0];
+      dist = parseInt(touchobj.clientX, 10) - startX;
+    });
 
-  sliderList.addEventListener('touchend', function(evt) {
-    if (dist < -swipeX) {
-      count++;
-      if (count >= sliderItem.length / numbersItemsSlider) {
-        count = 0;
+    sliderList.addEventListener('touchend', function(evt) {
+      if (dist < -swipeX) {
+        count++;
+        if (count >= sliderItem.length / numbersItemsSlider) {
+          count = 0;
+        }
+        onButtonsControlsClick();
+        activeDot(count);
       }
-      onButtonsControlsClick();
-      activeDot(count);
-    }
 
-    if (dist > swipeX) {
-      count--;
-      if (count < 0) {
-        count = sliderItem.length / numbersItemsSlider - 1;
+      if (dist > swipeX) {
+        count--;
+        if (count < 0) {
+          count = sliderItem.length / numbersItemsSlider - 1;
+        }
+        onButtonsControlsClick();
+        activeDot(count);
       }
-      onButtonsControlsClick();
-      activeDot(count);
-    }
-  });
+    });
+  }
+
 
 })();

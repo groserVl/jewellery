@@ -1,6 +1,7 @@
 'use strict';
 (function() {
 
+  var body = document.querySelector('.body');
   var modalFilter = document.querySelector('.modal-filter');
   var buttonOpenFilter = document.querySelector('.filters__tablet-button');
   var buttonCloseFilter = document.querySelector('.modal-filter__button-close');
@@ -21,8 +22,7 @@
     modalFilter.classList.add('modal-filter--show');
     modalOverlay.classList.add('modal-overlay--show');
 
-    document.body.style.overflow = 'hidden';
-
+    body.classList.add('body--overflow-hidden');
 
     buttonCloseFilter.addEventListener('click', onButtonCloseModalClick);
     modalOverlay.addEventListener('click', onModalOverlayClick);
@@ -37,7 +37,7 @@
     }
     modalOverlay.classList.remove('modal-overlay--show');
 
-    document.body.style.overflow = 'visible';
+    body.classList.remove('body--overflow-hidden');
   }
 
   // Фу-ия удаления обработчиков

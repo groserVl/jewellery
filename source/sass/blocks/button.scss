@@ -1,0 +1,26 @@
+.button {
+  display: block;
+  width: 100%;
+  min-height: 68px;
+
+  color: $bg;
+
+  border: 1px solid $brown;
+  background: none;
+  background-color: $brown;
+
+  transition: all 0.3s;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $text;
+
+    background-color: $bg;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

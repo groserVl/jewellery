@@ -2002,9 +2002,7 @@ legend.filters__list--hidden::after {
 @media (max-width: 1023px) {
   .catalog {
     width: 100%;
-    margin-top: 46px; }
-  .catalog-list {
-    width: 100%; } }
+    margin-top: 46px; } }
 
 @media (max-width: 767px) {
   .catalog {
@@ -2918,6 +2916,9 @@ p.modal-login__password-wrapper {
 
 .modal-filter--page .modal-filter__button-close {
   display: none; }
+
+.body--overflow-hidden {
+  overflow: hidden; }
 
 .modal-overlay {
   position: fixed;
