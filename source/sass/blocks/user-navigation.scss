@@ -6,6 +6,7 @@
   align-items: flex-start;
   justify-content: flex-end;
   width: 235px;
+  margin-bottom: 26px;
   padding-top: 5px;
 
   font-size: 14px;
@@ -41,6 +42,7 @@
 @media (max-width: $tablet-width) {
   .user-navigation {
     width: 25px;
+    margin: 0;
   }
 
   .user-navigation__item--tablet {

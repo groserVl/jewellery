@@ -69,7 +69,7 @@
   if (filters) {
     filters.forEach(function (item) {
       item.addEventListener('click', function() {
-        item.classList.toggle('modal-filter__list--hidden');
+        item.classList.toggle('modal-filter__legend--hidden');
       });
     });
   }

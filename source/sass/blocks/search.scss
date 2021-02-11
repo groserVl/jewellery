@@ -27,9 +27,12 @@
 
 .search input {
   margin-left: 7px;
+  margin-bottom: 23px;
 
   border: none;
   background-color: transparent;
+
+  border-radius: 0;
 
   transition: opacity 0.3s;
 
@@ -69,7 +72,7 @@
 
   .search svg {
     transform: scale(1.1);
-    // width: 100%;
+
     fill: $bg;
   }
 

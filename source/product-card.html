@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Smart Device</title>
+  <title>Jewellery</title>
   <link rel="preload" href="fonts/poppins-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/poppins-medium.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/poppins-bold.woff2" as="font" crossorigin="anonymous">
@@ -13,6 +13,45 @@
   <link rel="preload" href="fonts/cormorantgaramond-bold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
+<!-- Pixel Glass -->
+<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    /* Desktop layout by default */
+    /* background-image: url("pixel/main-desktop.jpg"); */
+    /* background-image: url("pixel/catalog-desktop.jpg"); */
+    /* background-image: url("pixel/product-card-desktop.jpg"); */
+    /* background-image: url("pixel/mod-log-desktop.jpg"); */
+  }
+  /* Tablet */
+  /* @media ( max-width: 1023px ) { */
+  @media ( min-width: 768px) and (max-width: 1023px) {
+    HTML {
+      /* Tablet layout */
+      /* background-image: url("pixel/main-tablet.jpg"); */
+      /* background-image: url("pixel/mod-log-tablet.jpg"); */
+      /* background-image: url("pixel/menu-tablet.jpg"); */
+    }
+  }
+  /* Mobile */
+  /* @media ( max-width: 767px ) { */
+  @media ( max-width: 320px ) {
+    HTML {
+      /* Mobile layout */
+      /* background-image: url("pixel/main-mobile.jpg"); */
+      /* background-image: url("pixel/mod-login-mobile.jpg"); */
+      /* background-image: url("pixel/menu-mobile.jpg"); */
+      background-image: url("pixel/product-card-mobile.jpg");
+    }
+  }
+</style>
+
+
+<link href="../pixel/styles.css" rel="stylesheet">
+<script src="../pixel/script.js"></script>
+
 
 <body class="body">
 
@@ -46,8 +85,9 @@
               <a class="user-navigation__link user-navigation__link-login" href="login.html">Login</a>
             </li>
             <li class="user-navigation__item user-navigation__item--img-cart">
-              <a class="user-navigation__link" href="#">Cart</a>
-              <span>0</span>
+              <a class="user-navigation__link" href="#">Cart
+                <span>0</span>
+              </a>
               <a class="user-navigation__link-img" href="#">
                 <svg class="user-navigation__image" width="20" height="18" role="img" aria-label="Иконка корзины" fill="none" stroke="#1d1613">
                   <use xlink:href="img/sprite_auto.svg#icon-cart"></use>
@@ -586,50 +626,52 @@
     </div>
   </footer>
 
-  <section class="modal-add-to-cart">
-    <button class="modal-add-to-cart__button-close button-close" type="button" tabindex="0">
-      <span class="visually-hidden">Закрыть модальное окно</span>
-    </button>
-    <h2>The item was added to your cart</h2>
-    <div class="modal-add-to-cart__top-wrapper">
-      <picture>
-        <!-- 1x: 70px; 2x: 140px  -->
-        <source type="image/webp" media="(max-width: 767px)" srcset="img/modal/mod-cart-mobile1x.webp 1x, img/modal/mod-cart-mobile2x.webp 2x">
-        <!-- 1x: 88px; 2x: 176px  -->
-        <source type="image/webp" media="(max-width: 1023px)" srcset="img/modal/mod-cart-tablet1x.webp 1x, img/modal/mod-cart-tablet2x.webp 2x">
-        <!-- 1x: 84px; 2x: 168px  -->
-        <source type="image/webp" srcset="img/modal/mod-cart-desktop1x.webp 1x, img/modal/mod-cart-desktop2x.webp 2x">
+  <div class="modal-overlay modal-overlay--transparency">
+    <section class="modal-add-to-cart">
+      <button class="modal-add-to-cart__button-close button-close" type="button" tabindex="0">
+        <span class="visually-hidden">Закрыть модальное окно</span>
+      </button>
+      <h2>The item was added to your cart</h2>
+      <div class="modal-add-to-cart__top-wrapper">
+        <picture>
+          <!-- 1x: 70px; 2x: 140px  -->
+          <source type="image/webp" media="(max-width: 767px)" srcset="img/modal/mod-cart-mobile1x.webp 1x, img/modal/mod-cart-mobile2x.webp 2x">
+          <!-- 1x: 88px; 2x: 176px  -->
+          <source type="image/webp" media="(max-width: 1023px)" srcset="img/modal/mod-cart-tablet1x.webp 1x, img/modal/mod-cart-tablet2x.webp 2x">
+          <!-- 1x: 84px; 2x: 168px  -->
+          <source type="image/webp" srcset="img/modal/mod-cart-desktop1x.webp 1x, img/modal/mod-cart-desktop2x.webp 2x">
 
-        <!-- 1x: 70px; 2x: 140px  -->
-        <source media="(max-width: 767px)" srcset="img/modal/mod-cart-mobile1x.jpg, img/modal/mod-cart-mobile2x.jpg 2x">
-        <!-- 1x: 88px; 2x: 176px  -->
-        <source media="(max-width: 1023px)" srcset="img/modal/mod-cart-tablet1x.jpg, img/modal/mod-cart-tablet2x.jpg 2x">
-        <!-- 1x: 84px; 2x: 168px  -->
-        <img src="img/modal/mod-cart-desktop1x.jpg" srcset="img/modal/mod-cart-desktop2x.jpg 2x" width="84" height="79" alt="Gold Necklace ">
-      </picture>
-      <div class="modal-add-to-cart__title-wrapper">
-        <h3>Gold Necklace</h3>
-        <p>$ 115</p>
+          <!-- 1x: 70px; 2x: 140px  -->
+          <source media="(max-width: 767px)" srcset="img/modal/mod-cart-mobile1x.jpg, img/modal/mod-cart-mobile2x.jpg 2x">
+          <!-- 1x: 88px; 2x: 176px  -->
+          <source media="(max-width: 1023px)" srcset="img/modal/mod-cart-tablet1x.jpg, img/modal/mod-cart-tablet2x.jpg 2x">
+          <!-- 1x: 84px; 2x: 168px  -->
+          <img src="img/modal/mod-cart-desktop1x.jpg" srcset="img/modal/mod-cart-desktop2x.jpg 2x" width="84" height="79" alt="Gold Necklace ">
+        </picture>
+        <div class="modal-add-to-cart__title-wrapper">
+          <h3>Gold Necklace</h3>
+          <p>$ 115</p>
+        </div>
+        <div class="modal-add-to-cart__controls">
+          <button class="modal-add-to-cart__button-controls modal-add-to-cart__button-increment" type="button">
+            <span class="visually-hidden">Увеличить на единицу</span>
+          </button>
+          <span>1</span>
+          <button class="modal-add-to-cart__button-controls modal-add-to-cart__button-decrement" type="button">
+            <span class="visually-hidden">Уменьшить на единицу</span>
+          </button>
+        </div>
       </div>
-      <div class="modal-add-to-cart__controls">
-        <button class="modal-add-to-cart__button-controls modal-add-to-cart__button-increment" type="button">
-          <span class="visually-hidden">Увеличить на единицу</span>
-        </button>
-        <span>1</span>
-        <button class="modal-add-to-cart__button-controls modal-add-to-cart__button-decrement" type="button">
-          <span class="visually-hidden">Уменьшить на единицу</span>
-        </button>
+      <div class="modal-add-to-cart__middle-wrapper">
+        <p class="modal-add-to-cart__number">You have <span>1</span> item in the cart</p>
+        <p class="modal-add-to-cart__sum">Cart subtotal: <span>$ 115</span></p>
       </div>
-    </div>
-    <div class="modal-add-to-cart__middle-wrapper">
-      <p class="modal-add-to-cart__number">You have <span>1</span> item in the cart</p>
-      <p class="modal-add-to-cart__sum">Cart subtotal: <span>$ 115</span></p>
-    </div>
-    <div class="modal-add-to-cart__bottom-wrapper">
-      <a class="modal-add-to-cart__button-shopping button" href="catalog.html">Continue shopping</a>
-      <a class="modal-add-to-cart__button-checkout button" href="#">Checkout</a>
-    </div>
-  </section>
+      <div class="modal-add-to-cart__bottom-wrapper">
+        <a class="modal-add-to-cart__button-shopping button" href="catalog.html">Continue shopping</a>
+        <a class="modal-add-to-cart__button-checkout button" href="#">Checkout</a>
+      </div>
+    </section>
+  </div>
 
   <section class="modal-login">
     <button class="modal-login__button-close button-close" type="button" tabindex="0">
@@ -653,8 +695,6 @@
       </div>
     </form>
   </section>
-
-  <div class="modal-overlay modal-overlay--transparency"></div>
 
   <script src="js/vendor.js"></script>
   <script>svg4everybody();</script>

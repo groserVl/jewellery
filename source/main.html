@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Smart Device</title>
+  <title>Jewellery</title>
   <link rel="preload" href="fonts/poppins-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/poppins-medium.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/poppins-bold.woff2" as="font" crossorigin="anonymous">
@@ -13,6 +13,43 @@
   <link rel="preload" href="fonts/cormorantgaramond-bold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
+<!-- Pixel Glass -->
+<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    /* Desktop layout by default */
+    /* background-image: url("pixel/main-desktop.jpg"); */
+    /* background-image: url("pixel/catalog-desktop.jpg"); */
+    /* background-image: url("pixel/product-card-desktop.jpg"); */
+    /* background-image: url("pixel/mod-log-desktop.jpg"); */
+  }
+  /* Tablet */
+  /* @media ( max-width: 1023px ) { */
+  @media ( min-width: 768px) and (max-width: 1023px) {
+    HTML {
+      /* Tablet layout */
+      /* background-image: url("pixel/main-tablet.jpg"); */
+      /* background-image: url("pixel/mod-log-tablet.jpg"); */
+      /* background-image: url("pixel/menu-tablet.jpg"); */
+    }
+  }
+  /* Mobile */
+  /* @media ( max-width: 767px ) { */
+  @media ( max-width: 320px ) {
+    HTML {
+      /* Mobile layout */
+      background-image: url("pixel/main-mobile.jpg");
+      /* background-image: url("pixel/mod-login-mobile.jpg"); */
+      /* background-image: url("pixel/menu-mobile.jpg"); */
+    }
+  }
+</style>
+
+
+<link href="../pixel/styles.css" rel="stylesheet">
+<script src="../pixel/script.js"></script>
 
 <body class="body">
 
@@ -34,7 +71,7 @@
             <input type="text" id="search" name="search" placeholder="Type here to search">
           </form>
 
-          <a class="nav__logo" href="main.html">
+          <a class="nav__logo">
             <svg class="nav__logo-image" width="66" height="66" role="img" aria-label="Логотип" fill="#a87b62">
               <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
             </svg>
@@ -46,8 +83,9 @@
               <a class="user-navigation__link user-navigation__link-login" href="login.html">Login</a>
             </li>
             <li class="user-navigation__item user-navigation__item--img-cart">
-              <a class="user-navigation__link" href="#">Cart</a>
-              <span>0</span>
+              <a class="user-navigation__link" href="#">Cart
+                <span>0</span>
+              </a>
               <a class="user-navigation__link-img" href="#">
                 <svg class="user-navigation__image" width="20" height="18" role="img" aria-label="Иконка корзины" fill="none" stroke="#1d1613">
                   <use xlink:href="img/sprite_auto.svg#icon-cart"></use>
@@ -420,7 +458,7 @@
           <a class="link" href="#">Read All</a>
         </div>
         <ul class="blog__list">
-          <li class="blog__item">
+          <li class="blog__item blog__item--left-margin">
             <article class="article">
               <div class="article__info">
                 <h3>How to care for <br> your jewellery</h3>
@@ -456,19 +494,19 @@
       <div class="container">
         <h2>Frequently asked questions</h2>
         <ul class="questions__list">
-          <li class="questions__item questions__item--width-large questions__item--active">
+          <li class="questions__item questions__item--width-large questions__item--active" tabindex="0">
             <h3 class="questions__active">What materials are the jewellery made of?</h3>
             <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
           </li>
-          <li class="questions__item questions__item--width-small">
+          <li class="questions__item questions__item--width-small" tabindex="0">
             <h3>Which countries do you deliver to?</h3>
             <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
           </li>
-          <li class="questions__item questions__item--width-medium">
+          <li class="questions__item questions__item--width-medium" tabindex="0">
             <h3>What are the payment methods?</h3>
             <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
           </li>
-          <li class="questions__item questions__item--width-long">
+          <li class="questions__item questions__item--width-long" tabindex="0">
             <h3>Can I return the <br class="questions__transfer"> jewellery if it didn’t fit me?</h3>
             <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
           </li>
@@ -698,9 +736,6 @@
   </footer>
 
   <section class="modal-login">
-    <button class="modal-login__button-close button-close" type="button" tabindex="0">
-      <span class="visually-hidden">Закрыть модальное окно</span>
-    </button>
     <h2>Log In</h2>
     <form action="https://echo.htmlacademy.ru" method="POST">
       <p class="modal-login__email-wrapper">
@@ -717,6 +752,9 @@
         <p>Don’t have an account?</p>
         <a href="#">Sign up</a>
       </div>
+      <button class="modal-login__button-close button-close" type="button" tabindex="0">
+        <span class="visually-hidden">Закрыть модальное окно</span>
+      </button>
     </form>
   </section>
 

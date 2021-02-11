@@ -4,9 +4,9 @@
 
 @media (max-width: $tablet-width) {
   .modal-filter {
-    position: fixed;
+    position: absolute;
     top: 27px;
-    left: 0;
+    left: 50%;
     z-index: 100;
 
     width: 423px;
@@ -14,6 +14,8 @@
 
     background-color: $bg;
     box-shadow: 0 5px 32px rgba(219, 213, 208, 0.24);
+
+    transform: translateX(-50%);
   }
 
   .modal-filter__button-close {
@@ -79,7 +81,7 @@
     }
   }
 
-  legend.modal-filter__list--hidden {
+  legend.modal-filter__legend--hidden {
     &::after {
       background-image: url("../img/svg/down-arrow-filters-tablet.svg");
     }
@@ -232,7 +234,7 @@
 @media (max-width: $mobile-width) {
   .modal-filter {
     top: 76px;
-    left: 25px;
+
     width: 270px;
   }
 
@@ -285,8 +287,8 @@
   }
 }
 
-.modal-filter__list--hidden + ul,
-.modal-filter__list--hidden + div {
+.modal-filter__legend--hidden + ul,
+.modal-filter__legend--hidden + div {
   display: none;
 }
 

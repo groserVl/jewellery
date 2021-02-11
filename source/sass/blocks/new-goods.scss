@@ -1,6 +1,6 @@
 .new-goods {
-  padding-top: 87px;
-  padding-bottom: 128px;
+  padding-top: 120px;
+  padding-bottom: 70px;
 }
 
 .new-goods__title-wrap {
@@ -22,12 +22,12 @@
 @media (max-width: $tablet-width) {
   .new-goods {
     padding-top: 69px;
-    padding-bottom: 30px;
+    padding-bottom: 64px;
   }
 
   .new-goods.new-goods--tablet {
-    padding-top: 39px;
-    padding-bottom: 74px;
+    padding-top: 60px;
+    padding-bottom: 64px;
   }
 
   .new-goods__title-wrap {

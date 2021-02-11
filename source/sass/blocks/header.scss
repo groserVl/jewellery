@@ -9,11 +9,26 @@
     padding-top: 30px;
   }
 
+  .header--nojs .nav__toggle {
+    display: none;
+  }
+
   // menu
   .header.header--nojs,
   .header.header--mobile {
-    background-color: $brown;
+    width: 100%;
     padding-bottom: 123px;
+
+    background-color: $brown;
+  }
+
+  .header.header--mobile {
+    position: absolute;
+    z-index: 100;
+
+    height: 100vh;
+
+    overflow: auto;
   }
 
   .header--nojs .nav__logo-image,
@@ -64,7 +79,7 @@
 
 @media (max-width: $mobile-width) {
   .header {
-    padding-top: 20px;
+    padding-top: 11px;
   }
 
   .header.header--nojs,

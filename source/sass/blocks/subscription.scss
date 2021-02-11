@@ -41,6 +41,8 @@
 
   transition: opacity 0.3s;
 
+  border-radius: 0;
+
   &::placeholder {
     font-size: 14px;
     color: $brown;

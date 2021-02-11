@@ -55,6 +55,7 @@
     modalOverlay.classList.add('modal-overlay--show');
 
     body.classList.add('body--overflow-hidden');
+    buttonCloseModalAddCart.focus();
 
     buttonCloseModalAddCart.addEventListener('click', onButtonCloseModalClick);
     modalOverlay.addEventListener('click', onModalOverlayClick);

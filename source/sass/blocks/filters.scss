@@ -40,13 +40,13 @@
     right: 0;
 
     width: 17px;
-    height: 8px;
+    height: 10px;
 
     background-image: url("../img/svg/up-arrow-desktop.svg");
   }
 }
 
-legend.filters__list--hidden {
+legend.filters__legend--hidden {
   &::after {
     background-image: url("../img/svg/down-arrow-desktop.svg");
   }
@@ -60,12 +60,6 @@ legend.filters__list--hidden {
 
 .filters__fieldset-wrapper li {
   margin-bottom: 8px;
-}
-
-.filters__product-list input,
-.filters__material-list input,
-.filters__collection-list input {
-  display: none;
 }
 
 .filters__product-list label,
@@ -93,6 +87,22 @@ legend.filters__list--hidden {
   &::before {
     background-color: $brown;
   }
+}
+
+.filters input:focus + label {
+  &::before {
+    outline: 2px solid #e59700;
+  }
+}
+
+.filters__list label,
+.filters__list input {
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  cursor: pointer;
 }
 
 // Поле стоимость
@@ -172,16 +182,6 @@ legend.filters__list--hidden {
   }
 }
 
-.filters__list label,
-.filters__list input {
-  &:hover,
-  &:focus {
-    opacity: 0.7;
-  }
-
-  cursor: pointer;
-}
-
 .filters__tablet-button {
   display: none;
 }
@@ -213,7 +213,7 @@ legend.filters__list--hidden {
   }
 }
 
-.filters__list--hidden + ul,
-.filters__list--hidden + div {
+.filters__legend--hidden + ul,
+.filters__legend--hidden + div {
   display: none;
 }

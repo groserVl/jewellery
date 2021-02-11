@@ -26,8 +26,8 @@
 }
 
 .modal-login__button-close {
-  top: 18px;
-  right: 20px;
+  top: 12px;
+  right: 12px;
 }
 
 .modal-login h2 {
@@ -50,6 +50,8 @@
   border: none;
   border-bottom: 1px solid #1d1613;
   background-color: transparent;
+
+  border-radius: 0;
 
   transition: opacity 0.3s;
 

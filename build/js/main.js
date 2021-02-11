@@ -20,9 +20,17 @@
     });
   });
 
+  question.forEach(function (item) {
+    item.addEventListener('keydown', function(evt) {
+      if (evt.keyCode === 13) {
+        item.classList.toggle('questions__item--active');
+      }
+    });
+  });
+
   filter.forEach(function (item) {
     item.addEventListener('click', function() {
-      item.classList.toggle('filters__list--hidden');
+      item.classList.toggle('filters__legend--hidden');
     });
   });
 
@@ -31,6 +39,7 @@
 'use strict';
 (function() {
 
+  var body = document.querySelector('.body');
   var header = document.querySelector('.header');
   var buttonToggleNav = document.querySelector('.nav__toggle');
 
@@ -40,6 +49,7 @@
 
   if (buttonToggleNav) {
     buttonToggleNav.addEventListener('click', function() {
+      body.classList.toggle('body--overflow-hidden');
       header.classList.toggle('header--mobile');
     });
   }
@@ -116,7 +126,7 @@
   if (filters) {
     filters.forEach(function (item) {
       item.addEventListener('click', function() {
-        item.classList.toggle('modal-filter__list--hidden');
+        item.classList.toggle('modal-filter__legend--hidden');
       });
     });
   }
@@ -180,6 +190,7 @@
     modalOverlay.classList.add('modal-overlay--show');
 
     body.classList.add('body--overflow-hidden');
+    buttonCloseModalAddCart.focus();
 
     buttonCloseModalAddCart.addEventListener('click', onButtonCloseModalClick);
     modalOverlay.addEventListener('click', onModalOverlayClick);

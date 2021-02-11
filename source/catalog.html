@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Smart Device</title>
+  <meta name="description" content="Catalog All Jewellery">
+  <title>Jewellery</title>
   <link rel="preload" href="fonts/poppins-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/poppins-medium.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/poppins-bold.woff2" as="font" crossorigin="anonymous">
@@ -45,8 +46,9 @@
               <a class="user-navigation__link user-navigation__link-login" href="login.html">Login</a>
             </li>
             <li class="user-navigation__item user-navigation__item--img-cart">
-              <a class="user-navigation__link" href="#">Cart</a>
-              <span>0</span>
+              <a class="user-navigation__link" href="#">Cart
+                <span>0</span>
+              </a>
               <a class="user-navigation__link-img" href="#">
                 <svg class="user-navigation__image" width="20" height="18" role="img" aria-label="Иконка корзины" fill="none" stroke="#1d1613">
                   <use xlink:href="img/sprite_auto.svg#icon-cart"></use>
@@ -105,19 +107,19 @@
                 <legend>Product</legend>
                 <ul class="filters__product-list filters__list">
                   <li>
-                    <input type="checkbox" name="product" id="product-necklaces" value="Necklaces" checked>
+                    <input class="visually-hidden" type="checkbox" name="product" id="product-necklaces" value="Necklaces" checked>
                     <label for="product-necklaces">Necklaces</label>
                   </li>
                   <li>
-                    <input type="checkbox" name="product" id="product-chokers" value="Chokers" checked>
+                    <input class="visually-hidden" type="checkbox" name="product" id="product-chokers" value="Chokers" checked>
                     <label for="product-chokers">Chokers</label>
                   </li>
                   <li>
-                    <input type="checkbox" name="product" id="product-rings" value="Rings">
+                    <input class="visually-hidden" type="checkbox" name="product" id="product-rings" value="Rings">
                     <label for="product-rings">Rings</label>
                   </li>
                   <li>
-                    <input type="checkbox" name="product" id="product-earrings" value="Earrings" checked>
+                    <input class="visually-hidden" type="checkbox" name="product" id="product-earrings" value="Earrings" checked>
                     <label for="product-earrings">Earrings</label>
                   </li>
                 </ul>
@@ -125,14 +127,14 @@
             </div>
             <div class="filters__fieldset-wrapper">
               <fieldset>
-                <legend class="filters__list--hidden">Material</legend>
+                <legend class="filters__legend filters__legend--hidden">Material</legend>
                 <ul class="filters__material-list filters__list">
                   <li>
-                    <input type="checkbox" name="material" id="material-gold" value="Gold">
+                    <input class="visually-hidden" type="checkbox" name="material" id="material-gold" value="Gold">
                     <label for="material-gold">Gold</label>
                   </li>
                   <li>
-                    <input type="checkbox" name="material" id="material-silver" value="Silver">
+                    <input class="visually-hidden" type="checkbox" name="material" id="material-silver" value="Silver">
                     <label for="material-silver">Silver</label>
                   </li>
                 </ul>
@@ -140,14 +142,14 @@
             </div>
             <div class="filters__fieldset-wrapper">
               <fieldset>
-                <legend class="filters__list--hidden">Collection</legend>
+                <legend class="filters__legend filters__legend--hidden">Collection</legend>
                   <ul class="filters__collection-list filters__list">
                     <li>
-                      <input type="checkbox" name="collection" id="collection-pink-flamingo" value="Pink Flamingo">
+                      <input class="visually-hidden" type="checkbox" name="collection" id="collection-pink-flamingo" value="Pink Flamingo">
                       <label for="collection-pink-flamingo">Pink Flamingo</label>
                     </li>
                     <li>
-                      <input type="checkbox" name="collection" id="collection-dreams" value="Dreams">
+                      <input class="visually-hidden" type="checkbox" name="collection" id="collection-dreams" value="Dreams">
                       <label for="collection-dreams">Dreams</label>
                     </li>
                   </ul>
@@ -593,91 +595,91 @@
     </form>
   </section>
 
-  <section class="modal-filter modal-filter--nojs">
-    <h2 class="visually-hidden">Filters pop up</h2>
-      <button class="modal-filter__button-close" type="button">
-        <span class="visually-hidden">Close</span>
-      </button>
-      <form action="https://echo.htmlacademy.ru" method="POST">
-        <div class="modal-filter__fieldset-wrapper modal-filter__fieldset-wrapper--border-hidden">
-          <fieldset>
-            <legend>Product</legend>
-            <ul class="modal-filter__product-list modal-filter__list">
-              <li>
-                <input type="checkbox" name="product" id="necklaces" value="Necklaces" checked>
-                <label for="necklaces">Necklaces</label>
-              </li>
-              <li>
-                <input type="checkbox" name="product" id="chokers" value="Chokers" checked>
-                <label for="chokers">Chokers</label>
-              </li>
-              <li>
-                <input type="checkbox" name="product" id="rings" value="Rings">
-                <label for="rings">Rings</label>
-              </li>
-              <li>
-                <input type="checkbox" name="product" id="earrings" value="Earrings" checked>
-                <label for="earrings">Earrings</label>
-              </li>
-            </ul>
-          </fieldset>
-        </div>
-        <div class="modal-filter__fieldset-wrapper">
-          <fieldset>
-            <legend class="modal-filter__list--hidden">Material</legend>
-            <ul class="modal-filter__material-list modal-filter__list">
-              <li>
-                <input type="checkbox" name="material" id="gold" value="Gold">
-                <label for="gold">Gold</label>
-              </li>
-              <li>
-                <input type="checkbox" name="material" id="silver" value="Silver">
-                <label for="silver">Silver</label>
-              </li>
-            </ul>
-          </fieldset>
-        </div>
-        <div class="modal-filter__fieldset-wrapper">
-          <fieldset>
-            <legend class="modal-filter__list--hidden">Collection</legend>
-              <ul class="modal-filter__collection-list modal-filter__list">
+  <div class="modal-overlay">
+    <section class="modal-filter modal-filter--nojs">
+      <h2 class="visually-hidden">Filters pop up</h2>
+        <button class="modal-filter__button-close" type="button">
+          <span class="visually-hidden">Close</span>
+        </button>
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <div class="modal-filter__fieldset-wrapper modal-filter__fieldset-wrapper--border-hidden">
+            <fieldset>
+              <legend>Product</legend>
+              <ul class="modal-filter__product-list modal-filter__list">
                 <li>
-                  <input type="checkbox" name="collection" id="pink-flamingo" value="Pink Flamingo">
-                  <label for="pink-flamingo">Pink Flamingo</label>
+                  <input type="checkbox" name="product" id="necklaces" value="Necklaces" checked>
+                  <label for="necklaces">Necklaces</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="collection" id="dreams" value="Dreams">
-                  <label for="dreams">Dreams</label>
+                  <input type="checkbox" name="product" id="chokers" value="Chokers" checked>
+                  <label for="chokers">Chokers</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="product" id="rings" value="Rings">
+                  <label for="rings">Rings</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="product" id="earrings" value="Earrings" checked>
+                  <label for="earrings">Earrings</label>
                 </li>
               </ul>
-          </fieldset>
-        </div>
-        <div class="modal-filter__fieldset-wrapper modal-filter__fieldset-wrapper--border">
-          <fieldset>
-            <legend>Price</legend>
-            <div class="modal-filter__range-wrapper">
-              <div class="modal-filter__range-controls">
-                <div class="modal-filter__range-scale">
-                  <div class="modal-filter__range-bar"></div>
+            </fieldset>
+          </div>
+          <div class="modal-filter__fieldset-wrapper">
+            <fieldset>
+              <legend class="modal-filter__legend modal-filter__legend--hidden">Material</legend>
+              <ul class="modal-filter__material-list modal-filter__list">
+                <li>
+                  <input type="checkbox" name="material" id="gold" value="Gold">
+                  <label for="gold">Gold</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="material" id="silver" value="Silver">
+                  <label for="silver">Silver</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="modal-filter__fieldset-wrapper">
+            <fieldset>
+              <legend class="modal-filter__legend modal-filter__legend--hidden">Collection</legend>
+                <ul class="modal-filter__collection-list modal-filter__list">
+                  <li>
+                    <input type="checkbox" name="collection" id="pink-flamingo" value="Pink Flamingo">
+                    <label for="pink-flamingo">Pink Flamingo</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="collection" id="dreams" value="Dreams">
+                    <label for="dreams">Dreams</label>
+                  </li>
+                </ul>
+            </fieldset>
+          </div>
+          <div class="modal-filter__fieldset-wrapper modal-filter__fieldset-wrapper--border">
+            <fieldset>
+              <legend>Price</legend>
+              <div class="modal-filter__range-wrapper">
+                <div class="modal-filter__range-controls">
+                  <div class="modal-filter__range-scale">
+                    <div class="modal-filter__range-bar"></div>
+                  </div>
+                  <div class="modal-filter__toggle modal-filter__toggle-min"></div>
+                  <div class="modal-filter__toggle modal-filter__toggle-max"></div>
                 </div>
-                <div class="modal-filter__toggle modal-filter__toggle-min"></div>
-                <div class="modal-filter__toggle modal-filter__toggle-max"></div>
+                <div class="modal-filter__range-price">
+                  <label class="visually-hidden" for="minimum" >Стоимость от</label>
+                  <input type="text" name="min-price" id="minimum" value="$ 55">
+                  <label class="visually-hidden" for="maximum">Стоимость до</label>
+                  <input type="text" name="max-price" id="maximum" value="$ 155">
+                </div>
               </div>
-              <div class="modal-filter__range-price">
-                <label class="visually-hidden" for="minimum" >Стоимость от</label>
-                <input type="text" name="min-price" id="minimum" value="$ 55">
-                <label class="visually-hidden" for="maximum">Стоимость до</label>
-                <input type="text" name="max-price" id="maximum" value="$ 155">
-              </div>
-            </div>
-          </fieldset>
-        </div>
-        <button class="modal-filter__button button" type="submit">Apply</button>
-        <button class="modal-filter__button button modal-filter__button--white" type="button">Clear All</button>
-      </form>
-  </section>
-
-  <div class="modal-overlay"></div>
+            </fieldset>
+          </div>
+          <button class="modal-filter__button button" type="submit">Apply</button>
+          <button class="modal-filter__button button modal-filter__button--white" type="button">Clear All</button>
+        </form>
+    </section>
+  </div>
 
   <script src="js/vendor.js"></script>
   <script>svg4everybody();</script>

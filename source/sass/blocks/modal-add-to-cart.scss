@@ -1,16 +1,17 @@
 .modal-add-to-cart {
-  position: fixed;
+  position: absolute;
   top: 372px;
   left: 50%;
   z-index: 100;
 
   display: none;
-
   width: 500px;
   padding-top: 48px;
   padding-left: 35px;
   padding-right: 35px;
   padding-bottom: 57px;
+
+  overflow: auto;
 
   transform: translateX(-50%);
 
@@ -214,6 +215,10 @@ div.modal-add-to-cart__top-wrapper img {
     padding-top: 46px;
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  .modal-add-to-cart.modal-add-to-cart--nojs {
+    top: 80px;
   }
 
   .modal-add-to-cart h2 {

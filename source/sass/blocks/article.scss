@@ -16,6 +16,14 @@
   .article {
     background-size: 260px 300px;
   }
+
+  li.blog__item--left-margin h3 {
+    margin-left: 20px;
+  }
+
+  li.blog__item--left-margin time {
+    margin-left: 20px;
+  }
 }
 
 .article--crystals-img {
@@ -45,7 +53,7 @@
   width: 50%;
   height: 100%;
   margin-left: auto;
-  padding: 67px 7%;
+  padding: 67px 5%;
 }
 
 .article--crystals-img .article__info {
@@ -116,6 +124,11 @@
 
   .article--trends-img .article__info {
     padding: 86px 7%;
+  }
+
+  li.blog__item--left-margin h3,
+  li.blog__item--left-margin time {
+    margin-left: 0;
   }
 }
 
