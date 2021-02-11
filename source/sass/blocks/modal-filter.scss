@@ -18,6 +18,10 @@
     transform: translateX(-50%);
   }
 
+  .modal-filter.modal-filter--nojs {
+    top: 80px;
+  }
+
   .modal-filter__button-close {
     position: absolute;
     top: -16px;

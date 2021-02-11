@@ -17,6 +17,21 @@
 
 <body class="body">
 
+  <header class="header header--nojs">
+    <div class="container">
+      <nav class="header__nav nav nav--nojs">
+        <div class="nav__wrapper">
+          <a class="nav__logo" href="main.html">
+            <svg class="nav__logo-image" width="30" height="30" role="img" aria-label="Логотип" fill="#a87b62">
+              <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+            </svg>
+            <span class="visually-hidden">На главную</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
   <section class="modal-filter modal-filter--page modal-filter--nojs">
     <h2 class="visually-hidden">Filters pop up</h2>
       <a class="modal-filter__button-close" href="filter.html">
@@ -100,6 +115,88 @@
         <button class="modal-filter__button button modal-filter__button--white" type="button">Clear All</button>
       </form>
   </section>
+
+  <!-- <section class="filters filters--nojs">
+    <h2 class="visually-hidden">Filters</h2>
+    <form action="https://echo.htmlacademy.ru" method="POST">
+      <div class="filters__fieldset-wrapper">
+        <fieldset>
+          <legend>Product</legend>
+          <ul class="filters__product-list filters__list">
+            <li>
+              <input class="visually-hidden" type="checkbox" name="product" id="product-necklaces" value="Necklaces" checked>
+              <label for="product-necklaces">Necklaces</label>
+            </li>
+            <li>
+              <input class="visually-hidden" type="checkbox" name="product" id="product-chokers" value="Chokers" checked>
+              <label for="product-chokers">Chokers</label>
+            </li>
+            <li>
+              <input class="visually-hidden" type="checkbox" name="product" id="product-rings" value="Rings">
+              <label for="product-rings">Rings</label>
+            </li>
+            <li>
+              <input class="visually-hidden" type="checkbox" name="product" id="product-earrings" value="Earrings" checked>
+              <label for="product-earrings">Earrings</label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <div class="filters__fieldset-wrapper">
+        <fieldset>
+          <legend class="filters__legend filters__legend--hidden">Material</legend>
+          <ul class="filters__material-list filters__list">
+            <li>
+              <input class="visually-hidden" type="checkbox" name="material" id="material-gold" value="Gold">
+              <label for="material-gold">Gold</label>
+            </li>
+            <li>
+              <input class="visually-hidden" type="checkbox" name="material" id="material-silver" value="Silver">
+              <label for="material-silver">Silver</label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <div class="filters__fieldset-wrapper">
+        <fieldset>
+          <legend class="filters__legend filters__legend--hidden">Collection</legend>
+            <ul class="filters__collection-list filters__list">
+              <li>
+                <input class="visually-hidden" type="checkbox" name="collection" id="collection-pink-flamingo" value="Pink Flamingo">
+                <label for="collection-pink-flamingo">Pink Flamingo</label>
+              </li>
+              <li>
+                <input class="visually-hidden" type="checkbox" name="collection" id="collection-dreams" value="Dreams">
+                <label for="collection-dreams">Dreams</label>
+              </li>
+            </ul>
+        </fieldset>
+      </div>
+      <div class="filters__fieldset-wrapper filters__fieldset-wrapper--border">
+        <fieldset>
+          <legend>Price</legend>
+          <div class="filters__range-wrapper">
+            <div class="filters__range-controls">
+              <div class="filters__range-scale">
+                <div class="filters__range-bar"></div>
+              </div>
+              <div class="filters__toggle filters__toggle-min"></div>
+              <div class="filters__toggle filters__toggle-max"></div>
+            </div>
+            <div class="filters__range-price">
+              <label class="visually-hidden" for="min-price" >Стоимость от</label>
+              <input type="text" name="min-price" id="min-price" value="$ 55">
+              <label class="visually-hidden" for="max-price">Стоимость до</label>
+              <input type="text" name="max-price" id="max-price" value="$ 155">
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button class="filters__button button" type="submit">Apply</button>
+      <button class="filters__button button filters__button--white" type="button">Clear All</button>
+    </form>
+    <a class="filters__tablet-button button" href="filter.html">Filter</a>
+  </section> -->
 
   <script src="js/vendor.js"></script>
   <script>svg4everybody();</script>

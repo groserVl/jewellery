@@ -14,7 +14,7 @@
 
 @media (max-width: $tablet-width) {
   .footer {
-    padding-top: 50px;
+    padding-top: 52px;
     padding-bottom: 34px;
   }
 
@@ -30,6 +30,10 @@
 }
 
 @media (max-width: $mobile-width) {
+  .footer {
+    padding-top: 49px;
+  }
+
   .footer__wrapper {
     display: block;
   }

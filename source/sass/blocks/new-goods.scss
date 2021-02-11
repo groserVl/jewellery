@@ -1,6 +1,6 @@
 .new-goods {
-  padding-top: 120px;
-  padding-bottom: 70px;
+  padding-top: 86px;
+  padding-bottom: 129px;
 }
 
 .new-goods__title-wrap {
@@ -22,12 +22,12 @@
 @media (max-width: $tablet-width) {
   .new-goods {
     padding-top: 69px;
-    padding-bottom: 64px;
+    padding-bottom: 30px;
   }
 
   .new-goods.new-goods--tablet {
-    padding-top: 60px;
-    padding-bottom: 64px;
+    padding-top: 39px;
+    padding-bottom: 74px;
   }
 
   .new-goods__title-wrap {
@@ -44,8 +44,9 @@
 }
 
 @media (max-width: $mobile-width) {
-  .new-goods {
+  .new-goods.new-goods--tablet {
     padding-top: 59px;
+    padding-bottom: 65px;
   }
 
   .new-goods__title-wrap {
