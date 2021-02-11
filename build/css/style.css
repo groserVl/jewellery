@@ -2360,9 +2360,6 @@ legend.filters__legend--hidden::after {
   -webkit-box-shadow: 0 4px 32px rgba(121, 121, 121, 0.24);
           box-shadow: 0 4px 32px rgba(121, 121, 121, 0.24); }
 
-.modal-add-to-cart.modal-add-to-cart--nojs {
-  top: 100px; }
-
 .modal-add-to-cart__button-close {
   top: 18px;
   right: 20px; }
