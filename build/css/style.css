@@ -486,8 +486,8 @@ body {
   .header.header--mobile {
     position: absolute;
     z-index: 100;
-    height: 100vh;
-    overflow: auto; }
+    height: 100%;
+    overflow-y: auto; }
   .header--nojs .nav__logo-image,
   .header--mobile .nav__logo-image {
     fill: #ffffff; }
