@@ -487,7 +487,9 @@ body {
     position: absolute;
     z-index: 100;
     height: 100vh;
-    overflow: auto; }
+    overflow: auto;
+    -ms-touch-action: none;
+        touch-action: none; }
   .header--nojs .nav__logo-image,
   .header--mobile .nav__logo-image {
     fill: #ffffff; }
@@ -2961,7 +2963,9 @@ p.modal-login__password-wrapper {
   display: none; }
 
 .body--overflow-hidden {
-  overflow: hidden; }
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none; }
 
 .modal-overlay {
   position: fixed;

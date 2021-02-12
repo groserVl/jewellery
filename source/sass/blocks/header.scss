@@ -33,6 +33,7 @@
     height: 100vh;
 
     overflow: auto;
+    touch-action: none;
   }
 
   .header--nojs .nav__logo-image,
