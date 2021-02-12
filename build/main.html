@@ -15,6 +15,43 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
+<!-- Pixel Glass -->
+<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    /* Desktop layout by default */
+    background-image: url("pixel/main-desktop.jpg");
+    /* background-image: url("pixel/catalog-desktop.jpg"); */
+    /* background-image: url("pixel/product-card-desktop.jpg"); */
+    /* background-image: url("pixel/mod-log-desktop.jpg"); */
+  }
+  /* Tablet */
+  /* @media ( max-width: 1023px ) { */
+  @media ( min-width: 768px) and (max-width: 1023px) {
+    HTML {
+      /* Tablet layout */
+      /* background-image: url("pixel/main-tablet.jpg"); */
+      /* background-image: url("pixel/mod-log-tablet.jpg"); */
+      /* background-image: url("pixel/menu-tablet.jpg"); */
+    }
+  }
+  /* Mobile */
+  /* @media ( max-width: 767px ) { */
+  @media ( max-width: 320px ) {
+    HTML {
+      /* Mobile layout */
+      /* background-image: url("pixel/main-mobile.jpg"); */
+      /* background-image: url("pixel/mod-login-mobile.jpg"); */
+      /* background-image: url("pixel/menu-mobile.jpg"); */
+    }
+  }
+</style>
+
+
+<link href="../pixel/styles.css" rel="stylesheet">
+<script src="../pixel/script.js"></script>
+
 <body class="body">
 
   <header class="header header--nojs">

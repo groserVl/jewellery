@@ -1,6 +1,6 @@
 .new-goods {
-  padding-top: 86px;
-  padding-bottom: 129px;
+  padding-top: 120px;
+  padding-bottom: 70px;
 }
 
 .new-goods__title-wrap {
@@ -44,6 +44,10 @@
 }
 
 @media (max-width: $mobile-width) {
+  .new-goods {
+    padding-top: 60px;
+  }
+
   .new-goods.new-goods--tablet {
     padding-top: 59px;
     padding-bottom: 65px;

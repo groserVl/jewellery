@@ -34,6 +34,14 @@
     });
   });
 
+  filter.forEach(function (item) {
+    item.addEventListener('keydown', function(evt) {
+      if (evt.keyCode === 13) {
+        item.classList.toggle('filters__legend--hidden');
+      }
+    });
+  });
+
 })();
 
 'use strict';
